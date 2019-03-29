@@ -1,0 +1,67 @@
+Cơ sở dữ liệu:
+users(uid 	ufirstname 	ulastname 	uusername 	upassword 	uavatar 	umail)
+products(pid 	pname 	pprice 	pquantity 	pbrand 	pcategory 	pdescription 	pimage)
+orders_products(oid 	pid)
+orders(oid 	ouser 	oaddress 	ophone 	ototalprice 	ototalquantity 	otime)
+comments(cid 	ccomment 	ctime 	cuser 	cproduct)
+
+Tổ chức thư mục:
+|-- golgonphp
+  |-- Source Files
+      |-- assets
+          |-- fonts
+          |-- images (Lưu các file ảnh)
+              |-- logo/icon
+              |-- product
+          |-- js (Lưu các file javascript)
+          |-- stylesheets (Lưu các file css cho views)
+              |-- _header.css
+              |-- _footer.css
+              |-- home.css
+              |-- about.css
+              |-- collection.css
+              |-- contact.css
+              |-- detailproduct.css
+              [...]
+          |-- uploads (Lưu hình ảnh uploads)
+      |-- controllers (Lưu các file điều khiển, gọi thực thể/hàm DAO từ models để hiển thị ra views)
+          |-- login.php
+          |-- register.php
+          |-- search.php
+          |-- collection.php
+          [...]
+      |-- models (Lưu các file thực thể và các hàm DAO giao tiếp với database)
+          |-- users.php
+          |-- products.php
+          |-- orders.php
+          |-- comments.php
+      |-- views (Lưu các file giao diện)
+          |-- _header.php
+          |-- _footer.php
+          |-- home.php
+          |-- about.php
+          |-- collection.php
+          |-- contact.php
+          |-- detailproduct.php
+          |-- cart.php
+          |-- manage.php
+          |-- searchresults.php
+          |-- info.php
+          [...]
+      |-- connection.php (File kết nối với MySQLi)
+      |-- 404.php (File hiển thị trang báo lỗi)
+      |-- index.php (File trung tâm)
+      |-- routes.php (File điều hướng url)
+
+Chức năng chính:
+1. Đăng ký/đăng nhập
+2. Tìm kiếm (form input từ khóa, hiển thị sản phẩm trên trang searchresults.php)
+3. Thêm sản phẩm vào giỏ hàng, xuất hóa đơn (detailproduct.php -> click thêm vào giỏ -> cart.php -> thông báo xuất hóa đơn thành công/thất bại)
+4. Hiển thị các bảng sản phẩm trên trang chủ home.php, trang collection.php
+5. Bình luận trên trang chi tiết sản phẩm detailproduct.php
+6. Trang quản trị: thêm/sửa/xóa
+  6.1. Quản lý users
+  6.2. Quản lý products
+  6.3. Quản lý orders (xem được các sản phẩm đã đặt trong 1 hóa đơn)
+  6.4. Quản lý comments
+  
