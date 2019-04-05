@@ -93,7 +93,8 @@ CREATE TABLE `users` (
   `uusername` varchar(45) NOT NULL,
   `upassword` varchar(45) NOT NULL,
   `uavatar` varchar(1024) NOT NULL,
-  `umail` int(11) NOT NULL
+  `umail` varchar(100) NOT NULL,
+  `urole` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
