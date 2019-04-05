@@ -58,7 +58,7 @@ Chức năng chính:
 2. Tìm kiếm (form input từ khóa, hiển thị sản phẩm trên trang searchresults.php)
 3. Thêm sản phẩm vào giỏ hàng, xuất hóa đơn (detailproduct.php -> click thêm vào giỏ -> cart.php -> thông báo xuất hóa đơn thành công/thất bại)
 4. Hiển thị các bảng sản phẩm trên trang chủ home.php, trang collection.php
-5. Bình luận trên trang chi tiết sản phẩm detailproduct.php
+5. Trang chi tiết sản phẩm detailproduct.php
 6. Trang thông tin cá nhân ( đổi mật khẩu, xem giỏ hàng, xem lịch sử mua hàng)
 7. Trang quản trị: thêm/sửa/xóa
   7.1. Quản lý users
@@ -67,7 +67,7 @@ Chức năng chính:
   7.4. Quản lý comments
   
 Công việc:
-1: Hoàng
+1, nhập cơ sở dữ liệu (sản phẩm): Hoàng
 4,7.4: Hiếu
 7.1+7.2: De Ki
 5+7.3: Ngọc
