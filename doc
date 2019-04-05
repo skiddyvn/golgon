@@ -1,5 +1,5 @@
 Cơ sở dữ liệu:
-users(uid 	ufirstname 	ulastname 	uusername 	upassword 	uavatar 	umail)
+users(uid 	ufirstname 	ulastname 	uusername 	upassword 	uavatar 	umail    urole)
 products(pid 	pname 	pprice 	pquantity 	pbrand 	pcategory 	pdescription 	pimage)
 orders_products(oid 	pid)
 orders(oid 	ouser 	oaddress 	ophone 	ototalprice 	ototalquantity 	otime)
