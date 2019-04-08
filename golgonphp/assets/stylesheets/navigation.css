@@ -1,0 +1,120 @@
+#navigation {
+    width:20%;
+    padding: 24px 0 12px;
+    border:1px solid #d7d7d7; 
+    background-color:#fff;
+    position:relative;
+}
+/*==================== CATEGORY HEADER ====================*/
+.category-header {
+    position:relative;
+}
+.category-header-inner {
+    font-size:16px;
+    font-weight:bold;
+    color:#ed3a53;
+    padding:0 0 15px 25px;
+}
+.category-header:after {
+    content:'';
+    position:absolute;
+    width:15px;
+    height:10px;
+    top:4px;
+    left:27px;
+    background: url('../images/navigation-header.png') no-repeat;
+}
+/*==================== CATEGORY LEVEL 1 (Desktop,Laptop,Components,...) ====================*/
+.category-list > ul {
+    padding:0;
+    margin:0;
+    text-align:left;
+    padding-bottom: 40px;
+}
+.category-list > ul > li {
+    width:100%;
+    display:block;
+    cursor:pointer;
+    margin:0;
+    border:1px solid #fff;
+}
+/*==================== A HREF ====================*/
+.category-list li .title-href {
+    display:block;
+    height:100%;
+    position:relative;
+    padding:0;
+}
+.category-list li .title-href div{
+    padding:10px 30px 10px 20px;
+}
+.category-list li .title-href span {
+    padding:0 5px;
+}
+.category-list li .title-href img {
+    width:100%;
+    display:block;
+}
+.category-list > ul > li > a  {
+    color:#777;
+/*    color:#444;*/
+/*    font-family:poppins,sans-serif;*/
+}
+.category-list > ul > li:hover >a {
+    color:#ed3a53;
+}
+.category-list .menu-dropdown:hover .title-href span:after {
+    width:2px;
+    height:100%;
+    content:'';
+    position:absolute;
+    top:0;
+    right:-2px;
+    z-index:15;
+    background-color:#fff;
+}
+.category-list > ul > .menu-dropdown:hover {
+    border-top:1px solid #d7d7d7;
+    border-bottom:1px solid #d7d7d7;
+}
+/*==================== EXPANDED PANELS =================*/
+.sub-menu {
+    display:none;
+    position:absolute;
+    z-index:5;
+    top:0;
+    left:100%;
+    bottom:0;
+    min-width:800px;
+    height:100%;
+    background-color:#fff;
+    overflow:hidden;
+    border:1px solid #d7d7d7;
+    padding:30px;
+}
+
+/*==================== CATEGORY LEVEL 2 (Inside panels) ====================*/
+.level-2 > li{
+    float:left;
+    height:50%;
+}
+.level-2 > li span {
+    font-size:15px;
+    color:#ed3a53;
+}
+
+/*==================== CATEGORY LEVEL 3 (Inside panels) ====================*/
+.level-3 {
+    padding:10px 0;
+}
+.level-3 > li {
+    padding:5px 0;
+}
+.level-3 a {
+    display:block;
+    padding:5px 0;
+    color:#777;
+}
+.level-3 a:hover{
+    color:#ed3a53;
+}

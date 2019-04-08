@@ -1,0 +1,361 @@
+.pad-5-15 {
+    padding:5px 15px;
+}
+.pad-10-15 {
+    padding:10px 15px;
+}
+.pad-5-5 {
+    padding:5px 5px;
+}
+.pointer:hover {
+    cursor:pointer;
+}
+
+.bold {
+    font-weight:bold;
+}
+.font-1 {
+    font-size:1em;
+}
+.font-1-5 {
+    font-size:1.5em;
+}
+.font-2 {
+    font-size:2em;
+}
+/*=================== WHITE COLOR ========================*/
+
+.w-color {
+    color:#fff;
+}
+.w-color a{
+    color:#fff;
+}
+.brdb-hover:hover {border-bottom:1px solid #fff;}
+/*=================== HEADER ========================*/
+
+#upper-header {
+    max-width:100%;
+    padding:7px 0;
+}
+#lower-header {
+    max-width:100%;
+    background-color:#c2122d;
+}
+#extrabar {
+    max-width:100%;
+    background-color:#efefef;
+}
+#extrabar .inner {
+    border:2px dashed #bbb;
+    border-top:none;
+    border-bottom-left-radius:8px;
+    border-bottom-right-radius:8px;
+    background-color:#fff;
+    padding:15px 20px;
+}
+
+/*=================== MAIN LOGO ========================*/
+
+.image-wrapper {
+    margin-left:auto;
+    margin-right:15%;
+}
+.image-wrapper img{
+   width:100%;
+   padding:5px;
+   border-radius: 15px;
+}
+
+/*=================== CORNER LOGO ========================*/
+.logo-corner {
+    background-image: url("../images/slide-logo.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    width:100px;
+    height:38px;
+    transition:all 0.6s ease 0s;
+    margin-left:5%;
+    margin-right:auto;
+}
+.logo-corner:hover {
+    background-position-y:-80px;
+    border:2px dashed #ed3a53;
+}
+
+/*=================== BARS ========================*/
+
+.bars-icon {
+    display:none;
+}
+
+/*=================== SEARCH ========================*/
+
+#search-box {
+    display:flex;
+    border-radius:3px;
+    margin-right:20px;
+}
+.relative {
+    position:relative;
+}
+#search-box .relative button {
+    position:absolute;
+    background-color:#fff;
+    border:none;
+    top:7px;
+    right:2px;
+    padding:5px 10px;
+}
+#search-box .relative button i {
+    color:#d6d6d6;
+}
+#search-box .relative button:hover>i{
+    color:#555;
+}
+#search-box .relative input {
+    background-color:#fff;
+    height:40px;
+    width:100%;
+    border:none;
+    border:2px solid #ed3a53;
+    padding:5px 40px 5px 12px;
+    border-radius:3px;
+    color:#555;
+}
+
+/*=================== CART ========================*/
+.num-cart {
+    padding:0px 5px;
+    color:#fff;
+    margin:5px;
+}
+.cart-text {
+    margin:auto 10px;
+}
+/*=================== Advertisement ========================*/
+
+.adqc {
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    border:2px dashed #d6d6d6;
+    margin-left:25px;
+    transition: all 0.6s ease;
+}
+.adqc-1 {
+    background: url('../images/sprite-ad.png') no-repeat 0 0;
+    background-position:10px 10px;
+}
+.adqc-1:hover {
+    background-position:10px -84px;
+    border:2px dashed #ed3a53;
+}
+.adqc-2 {
+    background: url('../images/sprite-ad.png') no-repeat 0 0;
+    background-position:10px -176px;
+}
+.adqc-2:hover {
+    background-position:10px -274px;
+    border:2px dashed #ed3a53;
+}
+.adqc-3 {
+    background: url('../images/sprite-ad.png') no-repeat 0 0;
+    background-position:10px -365px;
+}
+.adqc-3:hover {
+    background-position:10px -460px;
+    border:2px dashed #ed3a53;
+}
+/*==== Contact ====*/
+.contact-phone {
+    background: url('../images/sprite-address.png') no-repeat 0 0;
+    width:16px;
+    height:16px;
+    display:block;
+}
+.contact-mail {
+    background: url('../images/sprite-address.png') no-repeat 0 0;
+    background-position-y:-25px;
+    width:16px;
+    height:16px;
+    display:block;
+}
+.contact-address {
+    background: url('../images/location.png') no-repeat 0 0;
+    background-size:contain;
+    width:16px;
+    height:16px;
+    display:block;
+}
+/*======================= NAV PANEL ==========================*/
+
+.cnavpanel {
+    display:none;
+    transition:all 0.6s ease;
+}
+.navpanel-ul {
+    width:100%;
+    padding:5px 5px;
+    text-align:center;
+}
+.navpanel-li {
+    width:100%;
+    padding:10px 5px;
+    border-bottom:1px solid #ccc;
+    text-align:center;
+}
+.navpanel-li:hover {
+    background-color:rgba(0,0,0,0.6);
+}
+.navpanel-li a {
+     color:#fff;
+}
+
+/*================== MEDIA LOWER HEADER ======================*/
+
+@media only screen and (max-width:900px) {
+    .bars-icon {
+        display: block;
+        text-align: right;
+        cursor: pointer;
+    }
+    #lower-header {
+        position:relative;
+    }
+    .cnavpanelresponsive {
+        display:block;
+        position:absolute;
+        z-index:10;
+        width:50%;
+        height:300px;
+        background-color:rgba(0,0,0,0.5);
+        right:0;
+        top:100%;
+    } 
+    .navpanel-li .col-12 {
+        text-align:center;
+    }
+    .brdb-hover:hover {
+        border:none;
+    }
+    
+}
+/*================== MEDIA EXTRA BAR ======================*/
+@media only screen and (max-width:900px) {
+    #search-box {
+        margin:auto;
+    }
+    .inner {
+        flex-direction:column;
+    }
+    .inner .inner-parent-div {
+        margin:auto;
+        padding:10px;
+    }
+    .inner .inner-parent-div-text {
+        padding:0 10px;
+    }
+}
+/*==================== MODAL ========================*/
+#signin:hover {
+    cursor:pointer;
+    color:#ed3a53;
+}
+
+#register:hover {
+    cursor:pointer;
+    color:#ed3a53;
+}
+
+.modal {
+    display:none;
+    position:fixed;
+    z-index:10;
+    overflow:auto;
+    width:100vw;
+    height:100vh;
+    left:0;
+    top:0;
+    background-color: rgba(0,0,0,0.5);
+    padding-top:60px;
+}
+.switch-button {
+    width:100%;
+}
+.switch-button button {
+    width:50%;
+    background-color:rgba(254,254,254,0.3);
+    border:none;
+    padding: 14px 20px;
+    cursor: pointer;
+    float:left;
+    font-weight:bold;
+    font-family:Arial;
+}
+.switch-button button:hover {
+    background-color:rgba(0,0,0,0.7);
+}
+.modal-content1 { /*Login*/
+    background-color:#fefefe;
+    margin:5px auto;
+    border:1px solid #888;
+    width:30vw;
+    font-family:Lucida, sans-serif ;
+}
+.modal label {font-weight:bold;font-size:11.5px;letter-spacing:1px;}
+.modal-content2 { /*register*/
+    background-color:#fefefe;
+    margin:5px auto;
+    border:1px solid #888;
+    width:30vw;
+    font-family:Lucida, sans-serif ;
+}
+.modal .container {padding:16px;}
+.modal img{width:25%;margin-left:35%;margin-top:10%;}
+.modal input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+}
+.modal input[name=fname],input[name=lname] {
+    width:50%;
+    float:left;
+}
+.modal button[type=submit] { /*Nut xac nhan dang nhap or dang ky*/
+    /*background-color: #4CAF50;*/
+    background-color:#ed3a53;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-weight:bold;
+}
+.modal select {
+    width:100%;
+    border: 1px solid #ccc;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+.close {
+    position:absolute;
+    color:#000;
+    font-size:35px;
+    font-weight:bold;
+    top:0;
+    right:35px;
+}
+.close:hover,.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+@media screen and (max-width:1024px) {
+    .modal-content1,.modal-content2 {
+        width:80vw;
+    }
+}

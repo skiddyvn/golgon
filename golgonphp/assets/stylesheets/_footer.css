@@ -1,0 +1,262 @@
+.clr {clear:both;}
+#footer {
+    border-top:3px solid #ed3a53;
+    color:#ed3a53;
+    font-size:14px;
+}
+#footer .container {
+    padding-left:35px;
+    padding-right:35px;
+    margin-right:auto;
+    margin-left:auto;
+}
+#topbar-footer {
+    width:100%;
+    background-color:#f9f9f9;
+    border-bottom:1px solid #ddd;
+}
+#topbar-footer-item {
+    width:95%;
+    margin-left:auto;
+    margin-right:auto;
+    display:flex;
+    color:#444;
+    font-weight:bold;
+    font-size:17px;
+}
+.block-item {
+    display:flex;
+    border-right:1px solid #ddd;
+    text-align:center;
+    padding:0 15px;
+    align-items:center;
+    justify-content: center;
+}
+.first-item {
+    border-left:1px solid #ddd;
+}
+.last-item {
+    width:50%;
+    padding:15px 10px;
+}
+
+.icon-block {
+    font-size:40px;
+    padding:0 10px;
+    color:#c2122d;
+}
+#register-mail-title {
+    font-size:13px;
+    padding:5px 0;
+}
+#group-register-mail {
+    display:flex;
+    align-items:center;
+}
+#register-mail-block {
+    display:flex;
+    position:relative;
+}
+.icon-mail {
+    position:absolute;
+    top:6px;
+    left:10px;
+    font-size:25px;
+    color:#bbb;
+}
+#register-mail-block-input {
+    width:100%;
+    border:1px solid #ddd;
+    padding:9px 25px 10px 40px;
+    border-top-left-radius:3px;
+    border-bottom-left-radius:3px;
+}
+#register-mail-block-btn {
+    background-color:#ed3a53;
+    color:#fff;
+    border:1px solid #b61028;
+    cursor:pointer;
+    border-top-right-radius:3px;
+    border-bottom-right-radius:3px;
+}
+
+
+#footer-section-1 {
+    display:block;
+    width:25%;
+    float:left;
+}
+.top-section-1 {
+    line-height:20px;	
+}
+#footer h3 {
+    color:#444;
+    font-size:17px;
+    text-align:center;
+}
+#footer-section-1 .hotline{
+    font-size: 19px;
+    color: #df120d;
+    font-weight: bold;
+    text-align:center;
+}
+#footer-section-1 .openingtime{
+    padding:10px 0;
+    font-size: 16px;
+    color: #444;
+    font-weight: bold;
+    text-align:center;
+}
+.registration {
+    width:100%;
+    text-align:center;
+}
+.registration img {
+    margin-left:auto;
+    margin-right:auto;
+}
+#footer-section-2 {
+    float:left;
+    width:20%;
+    text-align:left;
+    padding:0 30px;
+}
+#footer-section-2 h3 {
+    padding:10px 0;
+}
+#map{
+    display:block;
+    width: 25%;
+    float:right;
+}
+#map #map-block {
+    display:block;
+    width:100%;
+    height:300px;
+    overflow:hidden;
+}
+#map #map-block iframe {
+    width:100%;
+    height:100%;
+}
+#footer-section-3 {
+    float:right;
+    width:25%;
+    margin-right:2%;
+}
+#footer-section-3 div {
+    width:100%;
+    height:300px;
+    background-color:#fff;
+}
+
+#footer-below {
+    width:100%;
+    padding:20px;
+}
+#footer-below .container {
+    padding-left:15px;
+    padding-right:15px;
+    margin-right:auto;
+    margin-left:auto;	
+}
+.footer-below-title {
+    padding:10px 0;
+    color:#777;
+    font-weight:bold;
+}
+#footer-below-01 {
+    width:20%;
+    float:left;
+}
+.footer-below-flexbox {
+    width:100%;
+    display:flex;
+}
+.payment-method {
+    flex-direction:column;
+    display:flex;
+    align-items:center;
+    text-align:center;
+}
+.payment-icon img{
+    width:50%;
+}
+#footer-below-02 {
+    width:70%;
+    float:right;
+}
+#footer-last {
+    width:100%;
+    background-color:#ed3a53;
+    border-top:1px solid #a40f25;
+    color:#fff;
+    padding:20px;
+}
+#footer-last .container {
+    padding-left:15px;
+    padding-right:15px;
+    margin-right:auto;
+    margin-left:auto;
+}
+.copyright {
+    width:20%;
+    float:left;
+}
+.tags {
+    width:70%;
+    float:right;
+}
+.bank1 {
+    display:block;
+}
+.bank2 {
+    display:none;
+}
+@media only screen and (max-width:1024px) {
+    #topbar-footer {
+            width:100%;
+    }
+    .first-item,.second-item,.third-item {
+            display:none;
+    }
+    .last-item {
+            border:none;
+            width:80%;
+    }
+    #group-register-mail {
+        width:100%;
+    }
+    #group-register-mail-content {
+        width:100%;
+    }
+    #register-mail-title {
+        width:100%;
+    }
+    #footer-section-1 {width:100%;}
+    #map {width:100%;}
+    #footer-section-2 {
+            width:100%;
+            text-align:center;
+    }
+    #footer-section-3 {width:100%;margin-left:0;margin-top:50px;}
+    #footer-section-3 .fb-page {width:100%;data-width:100%;}
+    #footer-below-01 {
+            width:100%;
+    }
+    #footer-below-02 {
+            width:100%;
+    }
+    .bank2 {display:block;}
+    .bank1 {display:none;}
+    .bank2 img {
+            width:100%;
+    }
+    .copyright {
+            width:100%;
+            margin-bottom:20px;
+    }
+    .tags {
+            width:100%;
+    }
+}
