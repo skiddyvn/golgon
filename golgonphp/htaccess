@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /golgonphp
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+
+
+//Xóa dòng này sau khi down, sửa tên file thành ".htaccess"
