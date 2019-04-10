@@ -7,41 +7,8 @@ class User {
     private $password;
     private $avatar;
     private $mail;
-    /*===================== Chức năng extends từ UserDAO ================*/
+    private $role;
     
-    /*===================== Lỗi và xác nhận (validation) ================*/
-    private $errors;
-    
-    function errors() {
-        return $this->errors;
-    }
-    
-    function isValid() {
-        $this->validatePassword();
-        $this->validateName();
-        $this->validateMail();
-        return count($this->errors) == 0;
-    }
-    
-    private function validateName() {
-        if(!is_string($this->firstname) || !is_string($this->lastname) ) {
-            return $this->errors['name'] = 'Not a string.';
-        }
-    }
-    
-    private function validatePassword() {
-    }
-    
-    private function validateMail() {
-        if(!is_string($this->mail)) {
-            return $this->errors['mail'] = 'Not a string.';
-        }
-        
-        $pattern = '/^[a-z][a-z0-9_\.]@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$/';
-        if(!preg.match($pattern, $this->mail)) {
-            return $this->errors['mail'] = 'Not a valid mail.';
-        }
-    }
     /*===================== Hàm khởi tạo và getters/setters ================*/
     function __construct() {
         $this->userid    = null;
@@ -49,9 +16,18 @@ class User {
         $this->lastname  = '';
         $this->mail      = '';
         $this->avatar    = 'assets/images/default-avatar.png';
+        $this->role      = 'user';
     }
     
-    function getUserid() {
+    function getRole() {
+        return $this->role;
+    }
+
+    function setRole($role) {
+        $this->role = $role;
+    }
+
+        function getUserid() {
         return $this->userid;
     }
 
