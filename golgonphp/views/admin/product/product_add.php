@@ -91,7 +91,7 @@ require_once 'E:\xampp\htdocs\golgonphp\controllers\ProductController.php';
             <?php } ?>
             <!--                Import product form-->
 
-            <?php $brand = ProductDAO::getPbrand();
+            <?php $pbrand = ProductDAO::getPbrand();
             $pcategory = ProductDAO::getPcategory(); ?>
             <div class="content-form">
                 <form method="POST"  enctype="multipart/form-data">
@@ -107,30 +107,30 @@ require_once 'E:\xampp\htdocs\golgonphp\controllers\ProductController.php';
                         <span>Category :</span>
                         <select name="pcategory" class="rows-content-select">
                             <option >Select</option>
-                            <?php for ($i = 0; $i < sizeof($pcategory); $i++) {
+                            <!-- use while loop echo -->
+                            <?php while($row = $pcategory->fetch_assoc()) {
                                 ?>
-                                <option value="<?php echo $pcategory[$i]; ?>"><?php echo $pcategory[$i]; ?></option>
-                                <?php } ?>
+                                <option value="<?php echo $row['pcategory']; ?>" ><?php echo $row['pcategory']; ?></option> 
+                                <?php }; ?>
                         </select>
                     </div>
                     <div class="content-form-rows">
                         <span>Brand :</span>
                         <select name="pbrand" onchange="enableGroupId(this)"  class="rows-content-select">
                             <option >Select</option>
-                            <?php for ($i = 0; $i < $count=sizeof($brand); $i++) {
-                                if ($brand[$i] != $brand[$i - 1]) {
+                            <?php while($row = $pbrand->fetch_assoc()) {
                                 ?>
-                                <option value="<?php echo $brand[$i]; ?>"><?php echo $brand[$i]; ?></option>
-                                <?php } } ?>
+                                <option value="<?php echo $row['pbrand']; ?>"><?php echo $row['pbrand']; ?></option>
+                                <?php }; ?>
                         </select>
                     </div>
                     <div class="content-form-rows">
                         <span>Quantity :</span>
                         <select name="pquantity" class="rows-content-select">                        
                             <option value="">Select</option>
-                            <?php for ($i = 1; $i <= 200; $i++) { ?>
-                                <option value="<?php echo $i; ?>"><?php echo $i; ?></option>   
-                            <?php } ?>
+                            <?php for ($k = 1; $k <= 200; $k++) { ?>
+                                <option value="<?php echo $k; ?>"><?php echo $k; ?></option>   
+                            <?php }; ?>
                         </select>
                     </div>
                     <div class="content-form-rows">

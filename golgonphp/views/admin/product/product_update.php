@@ -96,7 +96,7 @@ require_once 'E:\xampp\htdocs\golgonphp\controllers\ProductController.php';
             <?php } ?>
             <!--                Update product form-->
             <?php
-            $brand = ProductDAO::getPbrand();
+            $pbrand = ProductDAO::getPbrand();
             $pcategory = ProductDAO::getPcategory();
             $pid =$_GET['id'];
             $product = ProductDAO::getAProduct($pid);
@@ -107,28 +107,29 @@ require_once 'E:\xampp\htdocs\golgonphp\controllers\ProductController.php';
                         <span>Product name :</span>
                         <input class="rows-content-text" name="pname" type="text" value="<?php echo $product['pname'] ?>">
                     </div>
+                    <img src="<?php echo $product['pimage'] ?>" alt="<?php echo $product['pname'] ; ?>"  style="width: 80px;height: 60px" >
                     <div class="content-form-rows">
                         <span>Image :</span>
-                        <img src="" >
+                        
                         <input class="rows-content-text" name="uploadFile" type="file">
                     </div>
                     <div class="content-form-rows">
                         <span>Category :</span>
                         <select name="pcategory" class="rows-content-select">
                             <option value="<?php echo $product['pcategory'] ?>"><?php echo $product['pcategory'] ?></option>
-                            <?php for ($i = 0; $i < sizeof($pcategory); $i++) {
+                            <?php while($row = $pcategory->fetch_assoc()) {
                                 ?>
-                                <option value="<?php echo $pcategory[$j]; ?>"><?php echo $pcategory[$j]; ?></option>
-                            <?php }?>
+                                <option value="<?php echo $row['pcategory']; ?>"><?php echo $row['pcategory']; ?></option>
+                            <?php } ?>
                         </select>
                     </div>
                     <div class="content-form-rows">
                         <span>Brand :</span>
                         <select name="pbrand" onchange="enableGroupId(this)"  class="rows-content-select">
                             <option value="<?php echo $product['pbrand'] ?>"><?php echo $product['pbrand'] ?></option>
-                            <?php for ($i = 1; $i < sizeof($brand); $i++) {
+                            <?php while($row = $pbrand->fetch_assoc()) {
                                 ?>
-                                <option value="<?php echo $brand[$i]; ?>"><?php echo $brand[$i]; ?></option>
+                                <option value="<?php echo $row['pbrand']; ?>"><?php echo $row['pbrand']; ?></option>
                                 <?php } ?>
                         </select>
                     </div>
@@ -136,8 +137,8 @@ require_once 'E:\xampp\htdocs\golgonphp\controllers\ProductController.php';
                         <span>Quantity :</span>
                         <select name="pquantity" class="rows-content-select">                        
                             <option value="<?php echo $product['pquantity'] ?>"><?php echo $product['pquantity'] ?></option>
-                            <?php for ($i = 1; $i <= 200; $i++) { ?>
-                                <option value="<?php echo $i; ?>"><?php echo $i; ?></option>   
+                            <?php for ($k = 1; $k <= 200; $k++) { ?>
+                                <option value="<?php echo $k; ?>"><?php echo $k; ?></option>   
                             <?php } ?>
                         </select>
                     </div>

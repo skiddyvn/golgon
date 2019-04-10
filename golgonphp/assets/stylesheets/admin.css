@@ -1,4 +1,4 @@
-﻿body {
+﻿﻿body {
     background: #fafafa;
     margin: 0;
 }
@@ -202,6 +202,9 @@
 
     .right-content .content-form {
         margin: 110px 25%;
+    }
+    .right-content .content-form img{
+        padding-left:155px
     }
 
 

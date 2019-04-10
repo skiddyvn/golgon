@@ -17,9 +17,11 @@ class ProductDAO {
         $mysqli->query("DELETE FROM products WHERE pid = $productid") or die($mysqli->error());
     }
 
-    public static function updateProduct($productid) {
-        $mysqli = Database::getConnection();
-        $mysqli->query("UPDATE products SET ");
+    public static function updateProduct($productid,$pname, $pprice, $pquantity, $pbrand, $pcategory, $pdescription, $pimage) {
+        $conn = Database::getConnection();
+        $stmt = $conn->prepare("UPDATE products SET pname=?,pprice=?, pquantity=?, pbrand=?, pcategory=?, pdescription=?,pimage=?");
+        $stmt->bind_param("siissss",$pname,$pprice,$pquantity,$pbrand,$pcategory,$pdescription,$pimage);
+        $stmt->execute();
     }
 
     public static function getListProducts() {
@@ -61,15 +63,13 @@ class ProductDAO {
 
     public static function getPbrand() {
         $mysqli = Database::getConnection();
-        $result = $mysqli->query("SELECT pbrand FROM products") or die($mysqli->error);
-
+        $result= $mysqli->query("SELECT DISTINCT pbrand FROM products") or die($mysqli->error);
         return $result;
     }
 
     public static function getPcategory() {
         $mysqli = Database::getConnection();
-        $result = $mysqli->query("SELECT pcategory FROM products") or die($mysqli->error);
-
+        $result = $mysqli->query("SELECT DISTINCT pcategory FROM products") or die($mysqli->error);
         return $result;
     }
 
