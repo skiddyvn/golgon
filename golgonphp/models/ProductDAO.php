@@ -1,7 +1,7 @@
 <?php
 
-require_once 'E:\xampp\htdocs\golgonphp\config\connection.php';
-require_once 'E:\xampp\htdocs\golgonphp\models\Product.php';
+require_once 'E:\xampp\htdocs\golgon\golgonphp\config\connection.php';
+require_once 'E:\xampp\htdocs\golgon\golgonphp\models\Product.php';
 
 class ProductDAO {
 

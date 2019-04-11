@@ -1,7 +1,7 @@
 <?php
-require_once 'E:\xampp\htdocs\golgonphp\models\ProductDAO.php';
-require_once 'E:\xampp\htdocs\golgonphp\models\Product.php';
-require_once 'E:\xampp\htdocs\golgonphp\controllers\ProductController.php';
+require_once 'E:\xampp\htdocs\golgon\golgonphp\models\ProductDAO.php';
+require_once 'E:\xampp\htdocs\golgon\golgonphp\models\Product.php';
+require_once 'E:\xampp\htdocs\golgon\golgonphp\controllers\ProductController.php';
 
 ?>
 
@@ -41,7 +41,7 @@ require_once 'E:\xampp\htdocs\golgonphp\controllers\ProductController.php';
             <div class="sidebar-contents">
                 <div class="sidebar-contents-row">
                     <img alt="error" src="../../../assets/images/icon/icon-next-sidebar.png" />
-                    <a href="http://localhost:81/golgonphp/views/admin/product/product_index.php#">Category</a>
+                    <a href="http://localhost:81/golgon/golgonphp/views/admin/product/product_index.php#">Category</a>
                 </div>
                 <div class="sidebar-contents-row">
                     <img alt="error" src="../../../assets/images/icon/icon-next-sidebar.png" />
@@ -77,7 +77,7 @@ require_once 'E:\xampp\htdocs\golgonphp\controllers\ProductController.php';
                 </div>
                 <div class="header-name-btn">
                     <img src="../../../assets/images/icon/plus.png" alt="error" />
-                    <a href="http://localhost:81/golgonphp/views/admin/product/product_add.php">Add new</a>
+                    <a href="http://localhost:81/golgon/golgonphp/views/admin/product/product_add.php">Add new</a>
                 </div>
             </div>
             <?php

@@ -2,7 +2,7 @@
 
 session_start();
 
-require_once 'E:\xampp\htdocs\golgonphp\models\ProductDAO.php';
+require_once 'E:\xampp\htdocs\golgon\golgonphp\models\ProductDAO.php';
 
 //ACTION ADD
 if (isset($_POST['add'])) {
@@ -16,7 +16,7 @@ if (isset($_POST['add'])) {
 
     //Upload File image
     if ($_FILES['uploadFile']['name'] != NULL) {
-        $target_dir = 'E:/xampp/htdocs/golgonphp/assets/images/products/' . $pcategory . '/'; // File have been save in this
+        $target_dir = 'E:/xampp/htdocs/golgon/golgonphp/assets/images/products/' . $pcategory . '/'; // File have been save in this
         $target_file = $target_dir . basename($_FILES['uploadFile']['name']);
         $pimage = basename($_FILES['uploadFile']['name']);
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
@@ -61,7 +61,7 @@ if (isset($_GET['delete'])) {
 
     $_SESSION['message'] = "Product have been deleted !!";
 
-    header('location: http://localhost:81/golgonphp/views/admin/product/product_index.php#');
+    header('location: http://localhost:81/golgon/golgonphp/views/admin/product/product_index.php#');
 }
 
 //ACTION UPDATE
@@ -78,7 +78,7 @@ if (isset($_POST['update'])) {
     $pdescription = $_POST['pdescription'];
 
     if (isset($_FILES['uploadFile']['name']) && ($_FILES['uploadFile']['name'] != NULL)) {
-        $target_dir = 'E:/xampp/htdocs/golgonphp/assets/images/products/' . $pcategory . '/'; // File have been save in this
+        $target_dir = 'E:/xampp/htdocs/golgon/golgonphp/assets/images/products/' . $pcategory . '/'; // File have been save in this
         $target_file = $target_dir . basename($_FILES['uploadFile']['name']);
         $pimage = basename($_FILES['uploadFile']['name']);
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
@@ -109,7 +109,7 @@ if (isset($_POST['update'])) {
         // if everything is ok, try to upload file
     } else {
         //delete old file
-        unlink("E:/xampp/htdocs/golgonphp/assets/images/products/$pimageOld");
+        unlink("E:/xampp/htdocs/golgon/golgonphp/assets/images/products/$pimageOld");
         //import new file
         move_uploaded_file($_FILES["uploadFile"]["tmp_name"], $target_file);
         ProductDAO::updateProduct($pid, $pname, $pprice, $pquantity, $pbrand, $pcategory, $pdescription, $pimage);
