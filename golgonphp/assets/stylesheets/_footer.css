@@ -3,6 +3,7 @@
     border-top:3px solid #ed3a53;
     color:#ed3a53;
     font-size:14px;
+    background-color:#fff;
 }
 #footer .container {
     padding-left:35px;
@@ -153,6 +154,7 @@
 #footer-below {
     width:100%;
     padding:20px;
+    background-color:#fff;
 }
 #footer-below .container {
     padding-left:15px;

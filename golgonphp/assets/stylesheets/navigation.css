@@ -1,5 +1,4 @@
 #navigation {
-    width:20%;
     padding: 24px 0 12px;
     border:1px solid #d7d7d7; 
     background-color:#fff;
@@ -29,10 +28,9 @@
     padding:0;
     margin:0;
     text-align:left;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
 }
 .category-list > ul > li {
-    width:100%;
     display:block;
     cursor:pointer;
     margin:0;
@@ -52,7 +50,8 @@
     padding:0 5px;
 }
 .category-list li .title-href img {
-    width:100%;
+    width:20px;
+    height:20px;
     display:block;
 }
 .category-list > ul > li > a  {
@@ -85,15 +84,26 @@
     top:0;
     left:100%;
     bottom:0;
-    min-width:800px;
+    min-width:962px;
     height:100%;
     background-color:#fff;
     overflow:hidden;
     border:1px solid #d7d7d7;
-    padding:30px;
 }
-
-/*==================== CATEGORY LEVEL 2 (Inside panels) ====================*/
+.sub-menu > ul {
+    min-width:748px;
+    padding:30px 0 30px 30px;
+    height:100%;
+}
+.menu-sidebanner {
+    width:182px;
+    height:100%;
+}
+.menu-sidebanner img {
+    width:100%;
+    height:100%;
+}
+/*==================== CATEGORY LEVEL 2 (Inside expanded panels) ====================*/
 .level-2 > li{
     float:left;
     height:50%;
@@ -103,7 +113,7 @@
     color:#ed3a53;
 }
 
-/*==================== CATEGORY LEVEL 3 (Inside panels) ====================*/
+/*==================== CATEGORY LEVEL 3 (Inside expanded panels) ====================*/
 .level-3 {
     padding:10px 0;
 }
@@ -117,4 +127,22 @@
 }
 .level-3 a:hover{
     color:#ed3a53;
+}
+
+@media only screen and (max-width:900px) {
+    .category-header:after {
+        display:none;
+    }
+    .category-list > ul > li{
+        float:left;
+    }
+    .sub-menu {
+        width:0px;
+    }
+    .category-list > ul > .menu-dropdown:hover {
+        border:1px solid #fff;
+    }
+    .category-list .menu-dropdown:hover .title-href span:after {
+        width:0px;
+    }
 }

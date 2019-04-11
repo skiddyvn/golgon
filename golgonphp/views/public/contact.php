@@ -3,8 +3,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <title>Contact & Support</title>
-        <link rel="stylesheet" href="../assets/stylesheets/contact.css">
-        <link rel="stylesheet" href="../assets/stylesheets/shared.css">
+        <link rel="stylesheet" href="/golgonphp/assets/stylesheets/contact.css">
+        <link rel="stylesheet" href="/golgonphp/assets/stylesheets/shared.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
@@ -12,7 +12,7 @@
             <div class="header-content">
                 <div class="header-image">
                     <div class="logo">
-                        <a href="/golgonphp/home"><img src="../assets/images/logoweb.png"></img></a>
+                        <a href="/golgonphp/home/index"><img src="/golgonphp/assets/images/logoweb.png"></img></a>
                     </div>
                 </div>
                 <!-- 	div class="header-title"><div class="header-title-wrap">Contact & Support</div></div> -->
@@ -80,7 +80,7 @@
             </div>
         </div>
         <div id="footer">
-            <img src="../assets/images/footer-fixed.jpg"></img>
+            <img src="/golgonphp/assets/images/footer-fixed.jpg"></img>
         </div>
     </body>
 </html>

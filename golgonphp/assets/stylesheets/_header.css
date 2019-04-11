@@ -14,15 +14,7 @@
 .bold {
     font-weight:bold;
 }
-.font-1 {
-    font-size:1em;
-}
-.font-1-5 {
-    font-size:1.5em;
-}
-.font-2 {
-    font-size:2em;
-}
+
 /*=================== WHITE COLOR ========================*/
 
 .w-color {
@@ -31,12 +23,102 @@
 .w-color a{
     color:#fff;
 }
-.brdb-hover:hover {border-bottom:1px solid #fff;}
+.brdb-hover:hover .header-nav-title{
+    border-top:2px dashed #eee;
+    border-right:2px dashed #eee;
+    border-left:2px dashed #eee;
+}
+.header-nav-icon {
+    padding:10px 0 0 0;
+    position:relative;
+}
+.header-nav-icon img {
+    width:60%;
+}
+.header-nav-title {
+    border-top:2px dashed rgba(0,0,0,0);
+    border-right:2px dashed rgba(0,0,0,0);
+    border-left:2px dashed rgba(0,0,0,0);
+    padding:5px 0;
+}
+/*Dong Bac, Tay Nam duong cheo phu*/
+.header-nav-icon:before {
+  display: block;
+  content: "";
+  width: 90px;
+  height: 2px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: transparent;
+  transform: rotate(-45deg) rotatey(90deg);
+  transform-origin: 22.5px 4px;
+  border-left: 12px solid #fff;
+  border-right: 12px solid #fff;
+  transition: 0.4s;
+}
+/*Dong,Tay Ox */
+.header-nav-icon n {
+  display: block;
+  width: 90px;
+  height: 2px;
+  position: absolute;
+  top: 45px;
+  left: 20px;
+  border-left: 6px solid #fff;
+  border-right: 6px solid #fff;
+  transition: 0.4s;
+  transform: rotatey(90deg);
+}
+/*Tay Bac, Dong Nam duong cheo chinh*/
+.header-nav-icon n:after{
+  content: "";
+  transition: 0.4s;
+  width: 75px;
+  height: 2px;
+  top: -15px;
+  left: 0px;
+  background: transparent;
+  position: absolute;
+  transform: rotatex(90deg) rotatey(90deg);
+  transform-origin: 22.5px 4px;
+  border-left: 8px solid #fff;
+  border-right: 8px solid #fff;
+}
+/*Bac, Nam Oy*/
+.header-nav-icon n:before {
+  content: "";
+  transition: 0.4s;
+  width: 80px;
+  height: 2px;
+  background: transparent;
+  position: absolute;
+  transform: rotate(90deg) rotatey(90deg);
+  transform-origin: 22px 3px;
+  top: -25px;
+  left: 15px;
+  border-left: 6px solid #fff;
+  border-right: 6px solid #fff;
+}
+.header-nav-icon:hover:before {
+  transform: rotate(-45deg) rotatey(0deg);
+}
+.header-nav-icon:hover n {
+  transform: rotatey(0deg);
+}
+.header-nav-icon:hover n:after {
+  transform: rotate(45deg) rotatey(0deg);
+}
+.header-nav-icon:hover n:before {
+  transform: rotate(90deg) rotatey(0deg);
+}
+
 /*=================== HEADER ========================*/
 
 #upper-header {
     max-width:100%;
     padding:7px 0;
+    background-color:#fff;
 }
 #lower-header {
     max-width:100%;
@@ -45,6 +127,7 @@
 #extrabar {
     max-width:100%;
     background-color:#efefef;
+    background-image: url("/golgonphp/assets/images/bg.jpg");
 }
 #extrabar .inner {
     border:2px dashed #bbb;
@@ -54,7 +137,20 @@
     background-color:#fff;
     padding:15px 20px;
 }
+/*=================== LINK NAVIGATE IN TOP BAR ====================*/
 
+.upper-header-right .right div:hover {
+    cursor:pointer;
+    color:#ed3a53;
+}
+.upper-header-right .right span {
+    padding:5px 5px;
+    color:#777;
+}
+.upper-header-right .right a:hover span{
+    cursor:pointer;
+    color:#ed3a53;
+}
 /*=================== MAIN LOGO ========================*/
 
 .image-wrapper {
@@ -258,15 +354,6 @@
     }
 }
 /*==================== MODAL ========================*/
-#signin:hover {
-    cursor:pointer;
-    color:#ed3a53;
-}
-
-#register:hover {
-    cursor:pointer;
-    color:#ed3a53;
-}
 
 .modal {
     display:none;
