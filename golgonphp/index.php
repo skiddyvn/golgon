@@ -15,7 +15,7 @@
    $url_array = explode('/',$url);
    
    $controller = !empty($url_array[0]) ? $url_array[0] : "Home";
-   $action     = isset($url_array[1])  ? $url_array[1] : "index";
+   $action     = isset($url_array[1])  ? $url_array[1] : "start";
    $parameter  = isset($url_array[2])  ? $url_array[2] : null;
    
    $fileName = 'controllers/'.$controller.'Controller.php';
