@@ -13,15 +13,15 @@ class Product {
     /*===================== Chức năng extends từ ProductDAO ================*/
     
     /*===================== Hàm khởi tạo và getters/setters ================*/
-    function __construct() {
-        $this->pid          = null;
-        $this->pname        = '';
-        $this->price        = 0;
-        $this->pquantity    = 1;
-        $this->pbrand       = '';
-        $this->pcategory    = '';
-        $this->pdescription = '';
-        $this->pimage       = 'assets/images/not_exist.png';
+    function __construct($pid, $pname, $pprice, $pquantity, $pbrand, $pcategory, $pdescription, $pimage) {
+        $this->pid = $pid;
+        $this->pname = $pname;
+        $this->pprice = $pprice;
+        $this->pquantity = $pquantity;
+        $this->pbrand = $pbrand;
+        $this->pcategory = $pcategory;
+        $this->pdescription = $pdescription;
+        $this->pimage = $pimage;
     }
     
     function getPid() {
