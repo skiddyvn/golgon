@@ -6,7 +6,7 @@
     <div class="container">
         <!--=========================   LOGO  ==========================-->
         <div class="upper-header-left left col-3 col-xs-0">
-            <a href="/golgonphp/home"><div class="brda-2-dashed logo-corner pointer clearfix"></div></a>
+            <a href="/golgonphp/home/index"><div class="brda-2-dashed logo-corner pointer clearfix"></div></a>
         </div>
         <!--===============   INFORMATION//LOGIN//REGISTER  ============-->
        
@@ -49,36 +49,36 @@
         <div class="flex col-7 lower-header-navigation col-xs-0 col-sm-0">
             <!--================= Links ====================-->
             <div class="flex col-10">
-                <div class="col-2"><a href="/golgonphp/home"><i class="fa fa-home w-color font-1-5 brdb-hover"></i></a></div>
+                <div class="col-2"><a href="/golgonphp/home/index"><i class="fa fa-home w-color font-1-5 brdb-hover"></i></a></div>
                 <div class="col-3 w-color bold">
                     <a href="/golgonphp/home/news">
-                        <div class="flex">
-                            <div class="col-3"></div>
-                            <div class="col-9 font-1 brdb-hover">WHAT'S NEWS ?</div>
-                        </div>
+                        <div class="flex-col">
+                            <div class="header-nav-icon col-12"><img src="/golgonphp/assets/images/header-icons/icons8-new-100.png"/><n></n></div>
+                            <div class="header-nav-title col-12 font-1">WHAT'S NEWS ?</div>
+                        </div
                     </a>
                 </div>
-                <div class="col-2 w-color bold">
+                <div class="col-3 w-color bold">
                     <a href="/golgonphp/home/sales">
-                        <div class="flex">
-                            <div class="col-3"></div>
-                            <div class="col-9 font-1 brdb-hover">SALES</div>
+                        <div class="flex-col">
+                            <div class="header-nav-icon col-12"><img src="/golgonphp/assets/images/header-icons/icons8-discount-100.png"/><n></n></div>
+                            <div class="header-nav-title col-12 font-1">SALES</div>
                         </div>
                     </a>
                 </div>
-                <div class="col-2 w-color bold">
+                <div class="col-3 w-color bold">
                     <a href="/golgonphp/home/contact">
-                        <div class="flex">
-                            <div class="col-3"></div>
-                            <div class="col-9 font-1 brdb-hover">CONTACT</div>
+                        <div class="flex-col">
+                            <div class="header-nav-icon col-12"><img src="/golgonphp/assets/images/header-icons/icons8-help-100.png"/><n></n></div>
+                            <div class="header-nav-title col-12 font-1">CONTACT</div>
                         </div>
                     </a>
                 </div>
-                <div class="col-2 w-color bold">
+                <div class="col-3 w-color bold">
                     <a href="/golgonphp/home/about">
-                        <div class="flex">
-                            <div class="col-3"></div>
-                            <div class="col-9 font-1 brdb-hover">ABOUT US</div>
+                        <div class="flex-col">
+                            <div class="header-nav-icon col-12"><img src="/golgonphp/assets/images/header-icons/icons8-about-100.png"/><n></n></div>
+                            <div class="header-nav-title col-12 font-1">ABOUT US</div>
                         </div>
                     </a>
                 </div>
@@ -102,27 +102,39 @@
             <span id="bars-icon-i" class="fa fa-bars w-color fa-2x" onclick="responsiveCollapse()"></span>
             <div id="navpanel" class="cnavpanel">
                 <ul class="navpanel-ul flex-col">
-                    <li class="navpanel-li"><a href="/golgonphp/home"><i class="fa fa-home w-color font-1-5 brdb-hover"></i></a></li>
-                    <li class="navpanel-li"><a href="/golgonphp/home/news">
+                    <li class="navpanel-li">
+                        <a href="/golgonphp/home">
+                            <i class="fa fa-home w-color font-1-5 brdb-hover"></i>
+                        </a>
+                    </li>
+                    <li class="navpanel-li">
+                        <a href="/golgonphp/home/news">
                             <div class="flex">
                                 <div class="col-12 col-xs-12 col-sm-12 font-1 brdb-hover">WHAT'S NEWS ?</div>
                             </div>
-                        </a></li>
-                    <li class="navpanel-li"><a href="/golgonphp/home/sales">
+                        </a>
+                    </li>
+                    <li class="navpanel-li">
+                        <a href="/golgonphp/home/sales">
                             <div class="flex">
                                 <div class="col-12 col-xs-12 col-sm-12 font-1 brdb-hover">SALES</div>
                             </div>
-                        </a></li>
-                    <li class="navpanel-li"><a href="/golgonphp/home/contact">
+                        </a>
+                    </li>
+                    <li class="navpanel-li">
+                        <a href="/golgonphp/home/contact">
                             <div class="flex">
                                 <div class="col-12 col-xs-12 col-sm-12 font-1 brdb-hover">CONTACT</div>
                             </div>
-                        </a></li>
-                    <li class="navpanel-li"><a href="/golgonphp/home/about">
+                        </a>
+                    </li>
+                    <li class="navpanel-li">
+                        <a href="/golgonphp/home/about">
                             <div class="flex">
                                 <div class="col-12 col-xs-12 col-sm-12 font-1 brdb-hover">ABOUT US</div>
                             </div>
-                        </a></li>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
