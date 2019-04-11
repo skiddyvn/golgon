@@ -120,7 +120,7 @@ require_once 'E:\xampp\htdocs\golgonphp\controllers\ProductController.php';
                         <td><?php echo $value->getPid(); ?></td>
                         <td>
                             <div class="product-image">
-                                <img alt="error" src="<?php echo $value->getPimage() ; ?>" />
+                                <img alt="error" src="../../../assets/images/products/<?php echo $value->getPcategory(); ?>/<?php echo $value->getPimage() ; ?>" />
                             </div>
                             <div class="product-text">
                                 <p>Name: <?php echo $value->getPname(); ?></p>

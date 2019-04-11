@@ -107,11 +107,11 @@ require_once 'E:\xampp\htdocs\golgonphp\controllers\ProductController.php';
                         <span>Product name :</span>
                         <input class="rows-content-text" name="pname" type="text" value="<?php echo $product['pname'] ?>">
                     </div>
-                    <img src="<?php echo $product['pimage'] ?>" alt="<?php echo $product['pname'] ; ?>"  style="width: 80px;height: 60px" >
+                    <img src="../../../assets/images/products/<?php echo $product['pcategory']?>/<?php echo $product['pimage'] ?>" alt="<?php echo $product['pname'] ; ?>"  style="width: 80px;height: 60px" >
                     <div class="content-form-rows">
                         <span>Image :</span>
                         
-                        <input class="rows-content-text" name="uploadFile" type="file">
+                        <input class="rows-content-text" name="uploadFile" value="../../../assets/images/products/<?php echo $product['pcategory']?>/<?php echo $product['pimage'] ?>" type="file">
                     </div>
                     <div class="content-form-rows">
                         <span>Category :</span>

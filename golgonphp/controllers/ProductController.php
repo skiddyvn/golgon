@@ -66,7 +66,8 @@ if (isset($_GET['delete'])) {
 
 //ACTION UPDATE
 if (isset($_POST['update'])) {
-
+    $pid = $_GET['id'];
+    $product = ProductDAO::getAProduct($pid);
     $pname = $_POST['pname'];
     $pimageOld = $product['pimage'];
     $pimage = "";
@@ -76,7 +77,7 @@ if (isset($_POST['update'])) {
     $pprice = $_POST['pprice'];
     $pdescription = $_POST['pdescription'];
 
-    if (isset($_FILES['uploadFile']['name']) && ($_FILES['uploadFile'][name] != NULL)) {
+    if (isset($_FILES['uploadFile']['name']) && ($_FILES['uploadFile']['name'] != NULL)) {
         $target_dir = 'E:/xampp/htdocs/golgonphp/assets/images/products/' . $pcategory . '/'; // File have been save in this
         $target_file = $target_dir . basename($_FILES['uploadFile']['name']);
         $pimage = basename($_FILES['uploadFile']['name']);
@@ -112,6 +113,6 @@ if (isset($_POST['update'])) {
         //import new file
         move_uploaded_file($_FILES["uploadFile"]["tmp_name"], $target_file);
         ProductDAO::updateProduct($pid, $pname, $pprice, $pquantity, $pbrand, $pcategory, $pdescription, $pimage);
-        $_SESSION['message']="Product have been update";
+        $_SESSION['message'] = "Product have been update";
     }
 }
