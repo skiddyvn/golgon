@@ -1,0 +1,67 @@
+/*-------------Login/Register Section ---------*/
+#error-main-frame {
+    display:block;
+    padding:30px 0;
+}
+#error-main-frame .wrapper {
+    background-color:#fff;
+    padding:30px 0;
+    border:1px solid #d7d7d7;
+}
+
+.errorform {
+    position:relative;
+    left:0;
+    top:0;
+    padding-top:20px;
+    margin-left:auto;
+    margin-right:auto;
+    font-size:20px;
+    background-color:#fff;
+}
+label {
+    font-weight:bold;
+    font-size:11.5px;
+    letter-spacing:1px;
+    text-align:left;
+}
+.errorform .container {padding:16px;}
+.errorform img{margin-left:15vw;margin-top:5%;}
+#errornoti {
+    border:1px solid black;
+    border-radius:5px;
+    background-color: #fed2ff;
+    color:#000;
+    font-size:16px;
+    font-weight:bold;
+}
+
+#errornoti div {
+    margin-left:auto;
+    margin-right:auto;
+    padding:15px 20px;
+}
+.errorform input {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+}
+.errorform button[type=submit] { /*Nut xac nhan dang nhap or dang ky*/
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-weight:bold;
+}
+.errorform div {
+    padding:8px 0;
+}
+@media only screen and (max-width:600px) {
+    .fullname-div {
+        flex-direction:column;
+    }
+}

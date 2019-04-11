@@ -8,6 +8,21 @@ ul,li {
     margin:0;
     padding:0;
 }
+.font-1 {
+    font-size:1em;
+}
+.font-1-2 {
+    font-size:1.2em;
+}
+.font-1-5 {
+    font-size:1.5em;
+}
+.font-2 {
+    font-size:2em;
+}
+.font-3 {
+    font-size:3em;
+}
 /*=================== BODY========================*/
 body {
     width:100%;
@@ -19,6 +34,9 @@ body {
     font-size:13px;
     font-style:normal;
     color:#808080;
+    background-color:#eee;
+    letter-spacing:0.2px;
+    background: url("/golgonphp/assets/images/bg.jpg") fixed;
 }
 /*=================== DISPLAY ========================*/
 .inline-block {
@@ -109,6 +127,7 @@ button {
     .col-4 {width: 33.33%;flex-basis:33.33%;}
     .col-5 {width: 41.66%;flex-basis:41.66%;}
     .col-6 {width: 50%;flex-basis:50%;}
+    .col-6-5 {width:55%;flex-basis:55%;}
     .col-7 {width: 58.33%;flex-basis:58.33%;}
     .col-8 {width: 66.66%;flex-basis:66.66%;}
     .col-9 {width: 75%;flex-basis:75%;}
@@ -116,3 +135,73 @@ button {
     .col-11 {width: 91.66%;flex-basis:91.66%;}
     .col-12 {width: 100%;flex-basis:100%;}
 } 
+
+/*=================== ANIMATIONS ========================*/
+.animate-fading {animation:fading 3s;}
+@keyframes fading {
+    0%{opacity:0}
+    50%{opacity:1}
+    100%{opacity:1}
+}
+.animate-opacity {animation:opac 0.8s}
+@keyframes opac {
+    from{opacity:0}
+    to{opacity:1}
+}
+.animate-pulse {
+    display: block;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #ed3a53;
+    cursor: pointer;
+    box-shadow: 0 0 0 rgba(0,0,0, 0.3);
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0% {box-shadow: 0 0 0 0 rgba(0,0,0, 0.3);}
+    70% {box-shadow: 0 0 0 10px rgba(0,0,0, 0);}
+    100% {box-shadow: 0 0 0 0 rgba(0,0,0, 0);}
+}
+
+.scene_element {
+    animation-duration: 0.2s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both;
+
+  }
+  body.is-exiting .scene_element {
+        animation-direction: alternate-reverse;
+      }
+   .scene_element--fadeinright {
+       animation-name: fadeInRight;
+  }
+            @keyframes fadeInRight {
+                0% {
+                    opacity: 0;
+                    transform: translate3d(100%, 0, 0);
+                }
+                100% {
+                    opacity: 1;
+                    transform: none;
+                }
+            }
+
+
+/*=================== FONTS ========================*/
+@font-face {
+    font-family: Roboto;
+    src: url('/golgonphp/assets/fonts/Roboto-Light.ttf');
+}
+@font-face {
+    font-family: Righteous;
+    src: url('/golgonphp/assets/fonts/Righteous-Regular.ttf');
+}
+@font-face {
+    font-family: Helvetica Neue;
+    src: url('/golgonphp/assets/fonts/HelveticaNeue-Light.otf');
+}
+@font-face {
+    font-family: Poppins;
+    src: url('/golgonphp/assets/fonts/Poppins-Regular.ttf');
+}
