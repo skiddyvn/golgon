@@ -1,8 +1,5 @@
 <?php
 
-require_once 'E:\xampp\htdocs\golgon\golgonphp\config\connection.php';
-require_once 'E:\xampp\htdocs\golgon\golgonphp\models\Product.php';
-
 class ProductDAO {
 
     public static function addProduct($pname, $pprice, $pquantity, $pbrand, $pcategory, $pdescription, $pimage) {
@@ -73,8 +70,43 @@ class ProductDAO {
         return $result;
     }
 
+    public static function getListNewProducts($number) {
+        $mysqli = Database::getConnection();
+        $query = "select * from products order by pid desc limit ?";
+        $stmt = $mysqli->prepare($query);
+        $stmt->bind_param("i",$number);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        while($row = $result->fetch_assoc()){
+            $data[]=$row;
+        }
+        $mysqli->close();
+        return $data;
+    }
     public static function getListProductByCategory($category) {
-        
+        $mysqli = Database::ggetConnection();
+        $query = "select * from products where pcategory = ?";
+        $stmt = $mysqli->prepare($query);
+        $stmt->bind_param("s",$category);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        while($row = $result->fetch_assoc()){
+            $data[]=$row;
+        }
+        $mysqli->close();
+        return $data;
+    }
+    public static function getListProductByComponents() {
+        $mysqli = Database::getConnection();
+        $query = "select * from products where pcategory in('VGA','CPU','PSU','Mainboard','SSD','HDD','RAM','Cooling','Case')";
+        $stmt = $mysqli->prepare($query);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        while($row = $result->fetch_assoc()){
+            $data[]=$row;
+        }
+        $mysqli->close();
+        return $data;
     }
 
     public static function getListProductByBrand($brand) {
@@ -83,10 +115,6 @@ class ProductDAO {
 
     public static function getListProductByCategoryAndBrand($category, $brand) {
         
-    }
-
-    public static function getListNewProducts() {
-        echo "This is list of new products";
     }
 
 }
