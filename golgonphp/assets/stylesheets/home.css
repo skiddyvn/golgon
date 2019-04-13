@@ -11,6 +11,7 @@
 }
 .slider-tab-inner {
     height:412px;
+    overflow:hidden;
 }
 /*======================= Ảnh khi ấn các tabs =============================*/
 .slide-0{
@@ -23,14 +24,14 @@
 }
 /*======================= Previous/Next =============================*/
 .slider-event-button {
-    width:98%;
+    width:99%;
     margin:auto;
     display:block;
     float:left;
     text-align:center;
     position:absolute;
-    bottom:40%;
-    left:5px;
+    z-index:2;
+    top:170px;
 }
 .slider-event-button button {
     border:none;
@@ -43,11 +44,19 @@
     color:#fff;
 }
 /*======================= Dots =============================*/
+#stop {
+    color:#eee;
+}
+#stop:hover {
+    color:#ed3a53;
+    cursor:pointer;
+}
 .dots {
     position:absolute;
     text-align:center;
     right:10px;
-    bottom:10px;
+    z-index:2;
+    top:390px;
 }
 .dot-item {
     width:15px;
@@ -62,7 +71,10 @@
     display:block;
     height:350px;
 }
-
+.slide-1 {
+    position:absolute;
+    z-index:1;
+}
 /*======================= Tabs =============================*/
 .tabs{
     width:100%;
@@ -79,7 +91,7 @@
     background-color:#fff;
 }
 .tab-item:hover {
-    background-color:rgba(254,254,254,0.7);
+    background-color:#eee;
 }
 .tab-item.active {
     border-top:2px solid #ed3a53;
@@ -90,6 +102,10 @@
 #advertisement .row-right{
     justify-content:space-between;
     padding-left:5px;
+}
+#advertisement .row-right a {
+    overflow:hidden;
+    position:relative;
 }
 #advertisement .row-right img {
     width:100%;
@@ -121,19 +137,15 @@
     }
 }
 
-/*-%%%========================= HOME NEWS =================================%%%%-*/
-#home-news {
-    background-color:#fff;
-    padding:20px 0;
-    box-shadow:0px 0px 20px 0px rgba(0, 0, 0, 0.08);
-}
 /*-%%%========================= MARQUEE =================================%%%%-*/
+.home-marquee-frame {
+    margin-bottom:40px;
+}
 .home-marquee-ad {
-    background-color:#f5f5f5;
+    background-color:#eee;
     padding:10px 10px;
     position:relative;
-    border-radius:20px;
-    border:1px solid #ddd;
+    border:1px solid #eee;
 }
 .home-marquee-notify {
     position:absolute;
@@ -146,59 +158,118 @@
     font-weight:bold;
     font-family:Roboto;
 }
+
+/*-%%%========================= HOME NEWS =================================%%%%-*/
+#home-news {
+    background-color:#fff;
+    padding:10px 0;
+    box-shadow:0px 0px 20px 0px rgba(0, 0, 0, 0.08);
+}
 /*-%%%========================= TRENDING =================================%%%%-*/
 .trending {
     padding:10px 0;
 }
 .trending-title {
-    padding:15px 0;
+    padding:15px 0px;
     border-bottom:1px solid #ebebeb;
     align-items: flex-end;
     color:#000;
 }
-.trending-title div {
-    padding:0 15px;
+.trending-title-left {
+    align-items: flex-end;
 }
-.trending-title div:nth-child(1) {
+.trending-title .prev-next {
+    text-align:right;
+}
+.trending-title .prev-next span:hover {
+    color:#ed3a53;
+    cursor:pointer;
+}
+.trending-title > div {
     font-family: Righteous, cursive;
 }
-.trending-title div:nth-child(2) {
+.trending-title a{
     font-family: Poppins;
-    color:#e62e04;
+    color: #555;
     letter-spacing:1px;
     line-height: 22px;
     font-weight:500;
+    padding:0 20px;
+    cursor:pointer;
 }
-.trending-title div:nth-child(3) {
-    font-family: Poppins;
-    color:#888;
-    font-weight: 400;
-    line-height: 22px;
+.trending-title .selected {
+    color:#e62e04;
 }
-
+.trending-title a:hover {
+    color:#e62e04;
+}
+.tr-banner {
+    padding:30px 0;
+    position:relative;
+    overflow:hidden;
+}
+.tr-banner img{
+    width: 100%;
+    height: 200px;
+    object-fit:cover;
+    object-position: 0 50%;
+}
 /*-%%%========================= HOME BODY =================================%%%%-*/
 #home-body {
     margin-top:30px;
 }
 .home-body-block {
     background-color:#fff;
+    margin:50px 0;
+    position:relative;
+    overflow:hidden;
+    height:500px;
 }
-
-
+.home-body-side-banner img{
+    width:100%;
+    height:500px;
+}
 /*-%%%========================== PRODUCTS ==================================%%%-*/
 .products{
     display:flex;
     flex-wrap:wrap;
-    padding:10px 10px;
+    padding:15px 10px;
 }
+/*-%%%========================== PRODUCTS SLIDE ==================================%%%-*/
+.products-line {
+    display:none;
+    width:100%;
+    height:430px;
+    overflow:hidden;
+    position:relative;
+}
+.abs {
+    width:250%;
+    flex-wrap:nowrap;
+    position:absolute;
+    top:0;
+    left:0;
+    padding:30px 10px;
+    transition: 0.1s ease-in-out;
+}
+.abs .product-card {
+    width:28%;
+    margin-left:0;
+}
+#tab1,#tab3,#tab9 {
+    display:block;
+}
+/*-%%%========================== PRODUCTS CARD ==================================%%%-*/
 .product-card {
-    flex-basis:18%;
     display:flex;
-    box-shadow:0 0 3px #bbb;
     margin-left:1%;
     margin-right:1%;
     margin-bottom:20px;
     flex-direction:column;
+}
+.product-card:hover {
+    box-shadow:0 0 3px #bbb;
+    box-shadow:0px 0px 10.56px 0.44px rgba(0, 0, 0, 0.14);
 }
 .product-info {
     padding:10px 0;
@@ -208,29 +279,40 @@
     font-weight:500;
     color:#f25575;
 }
-.product-info:hover > .product-card {
-    border:1px solid #ddd;
-}
+/*-%%%========================== PRODUCTS INNER CARD IMAGE==================================%%%-*/
+
 .product-image {
     position:relative;
-    padding:5px 5px;
+    overflow:hidden;
+    height:250px;
 }
 .product-image:after {
     content:'';
-    background-color:rgba(0,0,0,0.3);
+    background-color:rgba(0,0,0,0.1);
     position:absolute;
     width:100%;
     height:100%;
     left:0;
     bottom:0;
-    opacity:0;
+    opacity:0.2;
     display:block;
 }
 .product-image:hover:after {
     cursor:pointer;
     opacity:1;
-    animation:fading 3s;
+    animation:fading 2s;
 }
+.product-image img{
+    width:100%;
+}
+.product-image img:hover {background-color:rgba(1,1,1,0.7);}
+.product-card .product-info {
+    margin-top:auto;
+    text-align:center;
+    color:#000;
+    font-size:14px;
+}
+/*-%%%========================== PRODUCTS DISPLAY BLOCK ==================================%%%-*/
 .inner-content-image {
     display:block;
     width:100%;
@@ -241,55 +323,47 @@
     border-style:none;
     position:absolute;
     z-index:5;
+    left:0;
 }
-.inner-content-image .addtwo {
+.inner-content-image .upper-block {
     border-style:none;
     background-color:#828282;
     color:#fff;
     padding:8px 10px;
     font-weight:bold;
     font-size:16px;
+    position:absolute;
 }
-.inner-content-image .addtwo:hover {
+.inner-content-image .upper-block:hover {
     cursor:pointer;
     background-color:rgba(37,35,35,0.8);
+}
+.upper-block-1 {
+    bottom:250%;
+}
+.upper-block-2 {
+    bottom:150%;
 }
 .product-image:hover > .inner-content-image {
     opacity:1;
 }
-.product-image img{
+
+/*-%%%========================== ADVERTISEMENT LINE ==================================%%%-*/
+.qcline div {
+    padding: 0 10px;
+    position:relative;
+    overflow:hidden;
+}
+.qcline img{
     width:100%;
+    height:180px;
 }
 
-.product-image img:hover {background-color:rgba(1,1,1,0.7);}
-.product-card .product-info {
-    margin-top:auto;
-    text-align:center;
-    color:#000;
-}
-.product-card .see {
-    border-style:none;
+/*-%%%========================== HOME INFO ==================================%%%-*/
+#home-info {
     background-color:#fff;
-    border:2px solid #bbb;
-    border-radius:5px;
-    padding:5px 7px;
-    margin-right:10px;
-}
-.product-card .add {
-    border-style:none;
-    background-color:#f58d9d;
-    border:2px solid #f58d9d;
-    border-radius:5px;
-    padding:5px 7px;
-    margin-right:10px;
-    color:#fff;
-    font-weight:bold;
-}
-.product-card .add:hover {
-    background-color:#dc2348;
-    cursor:pointer;
-}
-.product-card .see:hover {
-    background-color:#ddd;
-    cursor:pointer;
+    padding:10px 0;
+    box-shadow:0px 0px 20px 0px rgba(0, 0, 0, 0.08);
+    height:400px;
+    margin-bottom:50px;
 }
