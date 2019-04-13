@@ -1,7 +1,6 @@
 <?php
 
-require_once 'E:\xampp\htdocs\golgon\golgonphp\config\connection.php';
-require_once 'E:\xampp\htdocs\golgon\golgonphp\models\Product.php';
+
 
 class ProductDAO {
 
@@ -19,7 +18,7 @@ class ProductDAO {
 
     public static function updateProduct($productid,$pname, $pprice, $pquantity, $pbrand, $pcategory, $pdescription, $pimage) {
         $conn = Database::getConnection();
-        $stmt = $conn->prepare("UPDATE products SET pname=?,pprice=?, pquantity=?, pbrand=?, pcategory=?, pdescription=?,pimage=?");
+        $stmt = $conn->prepare("UPDATE products SET pname=?,pprice=?, pquantity=?, pbrand=?, pcategory=?, pdescription=?,pimage=? WHERE pid = $productid");
         $stmt->bind_param("siissss",$pname,$pprice,$pquantity,$pbrand,$pcategory,$pdescription,$pimage);
         $stmt->execute();
     }

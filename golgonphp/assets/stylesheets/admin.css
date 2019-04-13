@@ -176,7 +176,7 @@
             }
 
         .right-content .header-name .header-name-btn {
-            width: 15%;
+            width: 10%;
             float: right;
             border: 1px solid #cccccc;
             background: #f1f1f1;
@@ -395,8 +395,8 @@
         .right-content .admin-message .admin-message-info span {
             margin-top: 5px;
             position: absolute;
-            left: 315px;
-            top: 180px;
+            left: 321px;
+            top: 187px;
         }
 
 /*statistic-table*/

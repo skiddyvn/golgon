@@ -89,11 +89,10 @@ require_once 'E:\xampp\htdocs\golgon\golgonphp\controllers\ProductController.php
                         <img alt="error" src="../../../assets/images/icon/icon-alert.png" />
                         <span> <?php
                             echo $_SESSION['message'];
-                            unset($_SESSION['message']);
                             ?></span>
                     </div>
                 </div>
-            <?php } ?>
+            <?php } unset($_SESSION['message']); ?>
             <!--                Update product form-->
             <?php
             $pbrand = ProductDAO::getPbrand();

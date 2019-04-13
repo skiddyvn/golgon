@@ -84,11 +84,11 @@ require_once 'E:\xampp\htdocs\golgon\golgonphp\controllers\ProductController.php
                         <img alt="error" src="../../../assets/images/icon/icon-alert.png" />
                         <span> <?php
                             echo $_SESSION['message'];
-                            unset($_SESSION['message']);
+                            
                             ?></span>
                     </div>
                 </div>
-            <?php } ?>
+            <?php } unset($_SESSION['message']); ?>
             <!--                Import product form-->
 
             <?php $pbrand = ProductDAO::getPbrand();
@@ -142,7 +142,7 @@ require_once 'E:\xampp\htdocs\golgon\golgonphp\controllers\ProductController.php
                         <textarea class="rows-content-text" name="pdescription" type="text"></textarea>
                     </div>
                     <div class="content-form-btn">
-                        <a href="http://localhost:81/golgon\golgon/views/admin/product/product_index.php#">Back</a>
+                        <a href="http://localhost:81/golgon/golgonphp/views/admin/product/product_index.php#">Back</a>
                         <input id="myButton" type="submit" value="Add new" name="add" onclick="checkText(event)">
                     </div>
                 </form>

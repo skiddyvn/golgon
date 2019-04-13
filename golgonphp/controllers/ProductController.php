@@ -1,8 +1,9 @@
 <?php
 
 session_start();
-
+require_once 'E:\xampp\htdocs\golgon\golgonphp\config\connection.php';
 require_once 'E:\xampp\htdocs\golgon\golgonphp\models\ProductDAO.php';
+
 
 //ACTION ADD
 if (isset($_POST['add'])) {
@@ -58,6 +59,13 @@ if (isset($_GET['delete'])) {
     $id = $_GET['delete'];
 
     ProductDAO::deleteProduct($id);
+    $product = ProductDAO::getAProduct($pid);
+    
+    $pimageOld = $product['pimage'];
+    $pcategory = $product['pcategory'];
+    unlink("E:/xampp/htdocs/golgon/golgonphp/assets/images/products/$pcategory/$pimageOld");
+    
+    
 
     $_SESSION['message'] = "Product have been deleted !!";
 
@@ -91,10 +99,6 @@ if (isset($_POST['update'])) {
             $uploadOk = 0;
         }
     }
-    // Check if file already exists
-    if (file_exists($target_file)) {
-        $uploadOk = 0;
-    }
     // Check file size
     if ($_FILES["uploadFile"]["size"] > 500000) {
         $uploadOk = 0;
@@ -109,7 +113,7 @@ if (isset($_POST['update'])) {
         // if everything is ok, try to upload file
     } else {
         //delete old file
-        unlink("E:/xampp/htdocs/golgon/golgonphp/assets/images/products/$pimageOld");
+        unlink("E:/xampp/htdocs/golgon/golgonphp/assets/images/products/$pcategory/$pimageOld");
         //import new file
         move_uploaded_file($_FILES["uploadFile"]["tmp_name"], $target_file);
         ProductDAO::updateProduct($pid, $pname, $pprice, $pquantity, $pbrand, $pcategory, $pdescription, $pimage);
