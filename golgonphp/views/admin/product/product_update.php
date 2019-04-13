@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 
 <?php
-require_once 'E:\xampp\htdocs\golgon\golgonphp\controllers\ProductController.php';
+require_once 'E:\xampp\htdocs\golgonphp\controllers\ProductController.php';
 ?>
 <!DOCTYPE html>
 <html>
