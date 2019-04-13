@@ -23,6 +23,14 @@ ul,li {
 .font-3 {
     font-size:3em;
 }
+.pad-0-5 {padding:0px 5px;}
+.pad-0-10 {padding:0px 10px;}
+.pad-0-15 {padding:0px 15px;}
+.pad-5-5 {padding:5px 5px;}
+.pad-5-10 {padding:5px 10px;}
+.pad-5-15 {padding:5px 15px;}
+.pad-10-15 {padding:10px 15px;}
+.pad-15-0 {padding:15px 0px;}
 /*=================== BODY========================*/
 body {
     width:100%;
@@ -103,90 +111,45 @@ button {
 @media only screen and (min-width: 600px) and (max-width:899px) {
   /* For tablets: */
     .col-sm-0 {display:none;}
-    .col-sm-1 {width: 8.33%;flex-basis:8.33%;}
-    .col-sm-2 {width: 16.66%;flex-basis:16.66%;}
-    .col-sm-3 {width: 25%;flex-basis:25%;}
-    .col-sm-4 {width: 33.33%;flex-basis:33.33%;}
-    .col-sm-5 {width: 41.66%;flex-basis:41.66%;}
-    .col-sm-6 {width: 50%;flex-basis:50%;}
-    .col-sm-7 {width: 58.33%;flex-basis:58.33%;}
-    .col-sm-8 {width: 66.66%;flex-basis:66.66%;}
-    .col-sm-9 {width: 75%;flex-basis:75%;}
-    .col-sm-10 {width: 83.33%;flex-basis:88.33%;}
-    .col-sm-11 {width: 91.66%;flex-basis:91.66%;}
-    .col-sm-12 {width: 100%;flex-basis:100%;}
+    .col-sm-1 {width: 8.33%;}
+    .col-sm-2 {width: 16.66%;}
+    .col-sm-3 {width: 25%;}
+    .col-sm-4 {width: 33.33%;}
+    .col-sm-5 {width: 41.66%;}
+    .col-sm-6 {width: 50%;}
+    .col-sm-7 {width: 58.33%;}
+    .col-sm-8 {width: 66.66%;}
+    .col-sm-9 {width: 75%;}
+    .col-sm-10 {width: 83.33%;}
+    .col-sm-11 {width: 91.66%;}
+    .col-sm-12 {width: 100%;}
 }
 
 @media only screen and (min-width: 900px) {
   /* For desktop: */
     .col-0 {display:none;}
-    .col-1 {width: 8.33%;flex-basis:8.33%;}
-    .col-2 {width: 16.66%;flex-basis:16.66%;}
-    .col-2-5 {width:20%;flex-basis:20%;}
-    .col-3 {width: 25%;flex-basis:25%;}
-    .col-4 {width: 33.33%;flex-basis:33.33%;}
-    .col-5 {width: 41.66%;flex-basis:41.66%;}
-    .col-6 {width: 50%;flex-basis:50%;}
-    .col-6-5 {width:55%;flex-basis:55%;}
-    .col-7 {width: 58.33%;flex-basis:58.33%;}
-    .col-8 {width: 66.66%;flex-basis:66.66%;}
-    .col-9 {width: 75%;flex-basis:75%;}
-    .col-10 {width: 83.33%;flex-basis:88.33%;}
-    .col-11 {width: 91.66%;flex-basis:91.66%;}
-    .col-12 {width: 100%;flex-basis:100%;}
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-2-2 {width: 18%;}
+    .col-2-3 {width: 19%;}
+    .col-2-5 {width:20%;}
+    .col-2-7 {width:22%;}
+    .col-3 {width: 25%;}
+    .col-3-5 {width: 29%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-6-5 {width:55%;}
+    .col-6-6 {width:56%;}
+    .col-6-7 {width:57%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-9-5 {width:80%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
 } 
-
-/*=================== ANIMATIONS ========================*/
-.animate-fading {animation:fading 3s;}
-@keyframes fading {
-    0%{opacity:0}
-    50%{opacity:1}
-    100%{opacity:1}
-}
-.animate-opacity {animation:opac 0.8s}
-@keyframes opac {
-    from{opacity:0}
-    to{opacity:1}
-}
-.animate-pulse {
-    display: block;
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    background: #ed3a53;
-    cursor: pointer;
-    box-shadow: 0 0 0 rgba(0,0,0, 0.3);
-    animation: pulse 2s infinite;
-}
-@keyframes pulse {
-    0% {box-shadow: 0 0 0 0 rgba(0,0,0, 0.3);}
-    70% {box-shadow: 0 0 0 10px rgba(0,0,0, 0);}
-    100% {box-shadow: 0 0 0 0 rgba(0,0,0, 0);}
-}
-
-.scene_element {
-    animation-duration: 0.2s;
-    transition-timing-function: ease-in;
-    animation-fill-mode: both;
-
-  }
-  body.is-exiting .scene_element {
-        animation-direction: alternate-reverse;
-      }
-   .scene_element--fadeinright {
-       animation-name: fadeInRight;
-  }
-            @keyframes fadeInRight {
-                0% {
-                    opacity: 0;
-                    transform: translate3d(100%, 0, 0);
-                }
-                100% {
-                    opacity: 1;
-                    transform: none;
-                }
-            }
-
 
 /*=================== FONTS ========================*/
 @font-face {
@@ -204,4 +167,90 @@ button {
 @font-face {
     font-family: Poppins;
     src: url('/golgonphp/assets/fonts/Poppins-Regular.ttf');
+}
+
+/*=================== ANIMATIONS ========================*/
+.animate-fading {animation:fading 3s;}
+@keyframes fading {
+    0%{opacity:0}
+    50%{opacity:1}
+    100%{opacity:1}
+}
+.animate-opacity {animation:opac 1s}
+@keyframes opac {
+    from{opacity:0.4}
+    to{opacity:1}
+}
+.animate-pulse {
+    display: block;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #ed3a53;
+    cursor: pointer;
+    box-shadow: 0 0 0 rgba(0,0,0, 0.3);
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0% {box-shadow: 0 0 0 0 rgba(0,0,0, 0.3);}
+    70% {box-shadow: 0 0 0 10px rgba(0,0,0, 0);}
+    100% {box-shadow: 0 0 0 0 rgba(0,0,0, 0);}
+}
+.light-slide:after {
+    content:'';
+    position:absolute;
+    z-index:9;
+    top:0;
+    width:50%;
+    height:100%;
+    background:rgba(0, 0, 0, 0) linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%) repeat scroll 0 0;
+    transform: skewX(-50deg);
+}
+.light-slide:hover:after {
+    animation: light-slide 1s linear;
+}
+@keyframes light-slide {
+    0% {opacity: 1; left:-100%;}
+    25% {opacity: 1; left:20%;}
+    100% {opacity: 0; left:100%;}
+}
+.animate-slideleft {
+    animation: slideleft 3s ease-in-out;
+}
+@keyframes slideleft {
+    0%, 8.3% {left: -230px; opacity: 1;}
+    8.3%,100% {left: -230px; opacity: 1;}
+}
+.animate-slideright {
+    animation: slideright 3s ease-in-out;
+}
+@keyframes slideright {
+    0%, 8.3% {left: 230px; opacity: 1;}
+    8.3%,100% {left: 230px; opacity: 1;}
+}
+
+/*Specific animation*/
+.scene_element-fadeInRight {
+    animation: scenefadeInRight 0.2s ease-in;
+    animation-fill-mode: both;
+}
+@keyframes scenefadeInRight {
+    0% {opacity: 0; transform: translate3d(100%, 0, 0);}
+    100% {opacity: 1; transform: none;}
+}
+.product-image:hover .animate-e-fadeInLeft{
+    animation: e-fadeInLeft 5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes e-fadeInLeft {
+    0%, 8.3% {left: -100%; opacity: 0;}
+    8.3%,100% {left: 0%; opacity: 1;}
+}
+.product-image:hover .animate-e-fadeInRight{
+    animation: e-fadeInRight 5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes e-fadeInRight {
+    0%, 8.3% {right: -100%; opacity: 0;}
+    8.3%,100% {right: 0%; opacity: 1;}
 }

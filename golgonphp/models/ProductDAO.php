@@ -1,7 +1,10 @@
 <?php
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4655387db805a7be1ffabd8409b73564f4f59561
 class ProductDAO {
 
     public static function addProduct($pname, $pprice, $pquantity, $pbrand, $pcategory, $pdescription, $pimage) {
@@ -72,8 +75,45 @@ class ProductDAO {
         return $result;
     }
 
-    public static function getListProductByCategory($category) {
-        
+    public static function getListNewProducts($number) {
+        $mysqli = Database::getConnection();
+        $query = "select * from products order by pid desc limit ?";
+        $stmt = $mysqli->prepare($query);
+        $stmt->bind_param("i",$number);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        while($row = $result->fetch_assoc()){
+            $data[]=$row;
+        }
+        $mysqli->close();
+        return $data;
+    }
+    public static function getListProductByCategory($category,$limit) {
+        $mysqli = Database::getConnection();
+        $cat = "%$category%";
+        $query = "select * from products where pcategory like ? limit ?";
+        $stmt = $mysqli->prepare($query);
+        $stmt->bind_param("si", $cat,$limit);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $data = null;
+        while($row = $result->fetch_assoc()){
+            $data[]=$row;
+        }
+        $mysqli->close();
+        return $data;
+    }
+    public static function getListProductByComponents() {
+        $mysqli = Database::getConnection();
+        $query = "select * from products where pcategory in('VGA','CPU','PSU','Mainboard','SSD','HDD','RAM','Cooling','Case')";
+        $stmt = $mysqli->prepare($query);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        while($row = $result->fetch_assoc()){
+            $data[]=$row;
+        }
+        $mysqli->close();
+        return $data;
     }
 
     public static function getListProductByBrand($brand) {
@@ -82,10 +122,6 @@ class ProductDAO {
 
     public static function getListProductByCategoryAndBrand($category, $brand) {
         
-    }
-
-    public static function getListNewProducts() {
-        echo "This is list of new products";
     }
 
 }
