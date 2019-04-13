@@ -2,7 +2,6 @@
 require_once 'E:\xampp\htdocs\golgonphp\models\ProductDAO.php';
 require_once 'E:\xampp\htdocs\golgonphp\models\Product.php';
 require_once 'E:\xampp\htdocs\golgonphp\controllers\ProductController.php';
-
 ?>
 
 <!DOCTYPE html>
@@ -87,19 +86,19 @@ require_once 'E:\xampp\htdocs\golgonphp\controllers\ProductController.php';
                     <div class="admin-message-info" onclick="disappear(this)">
                         <img alt="error" src="../../../assets/images/icon/icon-alert.png" />
                         <span>
-                            <?php 
+                            <?php
                             echo $_SESSION['message'];
                             ?>
                         </span>
                     </div>
                 </div>
-            <?php } unset($_SESSION['message']) ; ?>
+            <?php } unset($_SESSION['message']); ?>
             <!--        Table header           -->
             <div class="table-header">
                 <span>Have</span>
-                <?php $Products = ProductDAO::getListProducts(); ?>
+                <?php $Products = ProductDAO::getListProductsLimit($start, $limit); ?>
                 <span> <?php echo $count = sizeof($Products); ?></span>
-                <span>Product</span>
+                <span>Products Of <?php echo ProductDAO::countById() ; ?> </span>
             </div>
             <!--        Table Category          -->
             <table id="myTable" cellpadding="10">
@@ -113,14 +112,13 @@ require_once 'E:\xampp\htdocs\golgonphp\controllers\ProductController.php';
                     </tr>
                 </thead>
                 <?php
-//                $Products = ProductDAO::getListProducts();
                 foreach ($Products as $value) {
                     ?>
                     <tr>
                         <td><?php echo $value->getPid(); ?></td>
                         <td>
                             <div class="product-image">
-                                <img alt="error" src="../../../assets/images/products/<?php echo $value->getPcategory(); ?>/<?php echo $value->getPimage() ; ?>" />
+                                <img alt="error" src="../../../assets/images/products/<?php echo $value->getPcategory(); ?>/<?php echo $value->getPimage(); ?>" />
                             </div>
                             <div class="product-text">
                                 <p>Name: <?php echo $value->getPname(); ?></p>
@@ -144,13 +142,24 @@ require_once 'E:\xampp\htdocs\golgonphp\controllers\ProductController.php';
             </table>
 
             <div class="table-divider">
-                <span>Previous</span>
-                <span>1</span>
-                <span>2</span>
-                <span>3</span>
-                ...
-                <span>99</span>
-                <span>Next</span>
+                <?Php
+                if ($per_page > 1) {
+                    $current_page = ($start / $limit + 1);
+                    if ($current_page != 1) {
+                        echo "<span><a href ='product_index.php?s=".($start-$limit)."&p=$per_page' > Previous </a></span>" ;
+                    }
+                    for ($i = 1; $i <= $per_page ; $i++) {
+                        if($i != $current_page ){
+                            echo "<span><a href ='product_index.php?s=".($limit*($i-1))."&p=$per_page'   >$i </a></span>";
+                        }else{
+                            echo "<span>$i</span>";
+                        }
+                    }
+                    if($current_page!= $per_page){
+                        echo "<span><a href ='product_index.php?s=".($start+$limit)."&p=$per_page' > Next </a></span>" ;
+                    }
+                }
+                ?>
             </div>
         </div>
     </body>
