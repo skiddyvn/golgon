@@ -120,3 +120,22 @@ if (isset($_POST['update'])) {
         $_SESSION['message'] = "Product have been update";
     }
 }
+//pagination
+$limit =10;
+if(isset($_GET['s']) && filter_var($_GET['s'],FILTER_VALIDATE_INT,array('min_range'=>1))){
+    $start = $_GET['s'];
+}
+ else {
+     $start=0;
+}
+if(isset($_GET['p']) && filter_var($_GET['p'],FILTER_VALIDATE_INT,array('min_range'=>1))){
+    $per_page = $_GET['p'];
+}
+ else {
+     $record = ProductDAO::countById();
+     if($record>$limit){
+         $per_page = ceil($record/$limit);
+     }else{
+         $per_page = 1;
+     }
+}
