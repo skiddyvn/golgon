@@ -83,13 +83,15 @@ class ProductDAO {
         $mysqli->close();
         return $data;
     }
-    public static function getListProductByCategory($category) {
-        $mysqli = Database::ggetConnection();
-        $query = "select * from products where pcategory = ?";
+    public static function getListProductByCategory($category,$limit) {
+        $mysqli = Database::getConnection();
+        $cat = "%$category%";
+        $query = "select * from products where pcategory like ? limit ?";
         $stmt = $mysqli->prepare($query);
-        $stmt->bind_param("s",$category);
+        $stmt->bind_param("si", $cat,$limit);
         $stmt->execute();
         $result = $stmt->get_result();
+        $data = null;
         while($row = $result->fetch_assoc()){
             $data[]=$row;
         }
