@@ -6,6 +6,8 @@ orders(oid 	ouser 	oaddress 	ophone 	ototalprice 	ototalquantity 	otime)
 comments(cid 	ccomment 	ctime 	cuser 	cproduct)
 
 Tổ chức thư mục:
+|-- xampps
+|-- htdocs
 |-- golgonphp
   |-- Source Files
       |-- assets
