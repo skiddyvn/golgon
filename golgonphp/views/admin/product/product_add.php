@@ -1,7 +1,7 @@
 
 <?php
-require_once 'E:\xampp\htdocs\golgon\golgonphp\models\ProductDAO.php';
-require_once 'E:\xampp\htdocs\golgon\golgonphp\controllers\ProductController.php';
+require_once 'E:\xampp\htdocs\golgonphp\models\ProductDAO.php';
+require_once 'E:\xampp\htdocs\golgonphp\controllers\ProductController.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -39,7 +39,7 @@ require_once 'E:\xampp\htdocs\golgon\golgonphp\controllers\ProductController.php
             <div class="sidebar-contents">
                 <div class="sidebar-contents-row">
                     <img alt="error" src="../../../assets/images/icon/icon-next-sidebar.png" />
-                    <a href="http://localhost:81/golgon/golgonphp/views/admin/product/product_index.php#">Category</a>
+                    <a href="http://localhost:81/golgonphp/views/admin/product/product_index.php#">Category</a>
                 </div>
                 <div class="sidebar-contents-row">
                     <img alt="error" src="../../../assets/images/icon/icon-next-sidebar.png" />
@@ -142,7 +142,7 @@ require_once 'E:\xampp\htdocs\golgon\golgonphp\controllers\ProductController.php
                         <textarea class="rows-content-text" name="pdescription" type="text"></textarea>
                     </div>
                     <div class="content-form-btn">
-                        <a href="http://localhost:81/golgon/golgonphp/views/admin/product/product_index.php#">Back</a>
+                        <a href="http://localhost:81/golgonphp/views/admin/product/product_index.php#">Back</a>
                         <input id="myButton" type="submit" value="Add new" name="add" onclick="checkText(event)">
                     </div>
                 </form>
