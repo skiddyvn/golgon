@@ -1,10 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 4655387db805a7be1ffabd8409b73564f4f59561
 class ProductDAO {
 
     public static function addProduct($pname, $pprice, $pquantity, $pbrand, $pcategory, $pdescription, $pimage) {
