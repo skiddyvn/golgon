@@ -1,5 +1,6 @@
 <?php
 
+
 class ProductDAO {
 
     public static function addProduct($pname, $pprice, $pquantity, $pbrand, $pcategory, $pdescription, $pimage) {
@@ -29,6 +30,21 @@ class ProductDAO {
             $list[] = new Product($item['pid'], $item['pname'], $item['pprice'], $item['pquantity'], $item['pbrand'], $item['pcategory'], $item['pdescription'], $item['pimage']);
         }
         return $list;
+    }
+    public static function getListProductsLimit($start,$limit) {
+        $list = [];
+        $mysqli = Database::getConnection();
+        $req = $mysqli->query("SELECT * FROM products ORDER  BY pid ASC LIMIT $start,$limit");
+        foreach ($req as $item) {
+            $list[] = new Product($item['pid'], $item['pname'], $item['pprice'], $item['pquantity'], $item['pbrand'], $item['pcategory'], $item['pdescription'], $item['pimage']);
+        }
+        return $list;
+    }
+    public static function countById() {
+        $mysqli = Database::getConnection();
+        $result=$mysqli->query("SELECT COUNT(pid) FROM products ");
+        $count = mysqli_fetch_assoc($result);
+        return $count['COUNT(pid)'];
     }
 
     public static function getAProduct($productId) {
