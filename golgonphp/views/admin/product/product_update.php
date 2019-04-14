@@ -44,7 +44,7 @@ require_once 'E:\xampp\htdocs\golgonphp\controllers\ProductController.php';
             <div class="sidebar-contents">
                 <div class="sidebar-contents-row">
                     <img alt="error" src="../../../assets/images/icon/icon-next-sidebar.png" />
-                    <a href="http://localhost:81/golgon\golgonphp/views/admin/product/product_index.php#">Category</a>
+                    <a href="http://localhost:81/golgonphp/views/admin/product/product_index.php#">Category</a>
                 </div>
                 <div class="sidebar-contents-row">
                     <img alt="error" src="../../../assets/images/icon/icon-next-sidebar.png" />
