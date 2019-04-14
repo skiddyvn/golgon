@@ -38,7 +38,7 @@ class ProductDAO {
         return $count['COUNT(pid)'];
     }
 
-    public static function getAProduct($productId) { /* ----------> getProductById */
+    public static function getProductById($productId) { /* ---------- Tên hàm cũ: getAProduct */
         $mysqli = Database::getConnection();
         $result = $mysqli->query("SELECT * FROM products WHERE pid = '$productId'") or die($mysqli->error());
         $product = mysqli_fetch_assoc($result);
