@@ -2,7 +2,7 @@
 
 
 class ProductDAO {
-
+    /*---================================  Thao tác dữ liệu  ===================================---*/
     public static function addProduct($pname, $pprice, $pquantity, $pbrand, $pcategory, $pdescription, $pimage) {
         $mysqli = Database::getConnection();
         $mysqli->query("INSERT INTO products (pname, pprice, pquantity, pbrand, pcategory, pdescription,pimage) "
@@ -21,16 +21,7 @@ class ProductDAO {
         $stmt->bind_param("siissss",$pname,$pprice,$pquantity,$pbrand,$pcategory,$pdescription,$pimage);
         $stmt->execute();
     }
-
-    public static function getListProducts() {
-        $list = [];
-        $mysqli = Database::getConnection();
-        $req = $mysqli->query("SELECT * FROM products");
-        foreach ($req as $item) {
-            $list[] = new Product($item['pid'], $item['pname'], $item['pprice'], $item['pquantity'], $item['pbrand'], $item['pcategory'], $item['pdescription'], $item['pimage']);
-        }
-        return $list;
-    }
+    /*---================================  Truy xuất dữ liệu  ===================================---*/
     public static function getListProductsLimit($start,$limit) {
         $list = [];
         $mysqli = Database::getConnection();
@@ -47,17 +38,21 @@ class ProductDAO {
         return $count['COUNT(pid)'];
     }
 
-    public static function getAProduct($productId) {
+    public static function getAProduct($productId) { /* ----------> getProductById */
         $mysqli = Database::getConnection();
         $result = $mysqli->query("SELECT * FROM products WHERE pid = '$productId'") or die($mysqli->error());
         $product = mysqli_fetch_assoc($result);
         return $product;
     }
-
-    public static function listProducts() {
+    public static function getPbrand() {
         $mysqli = Database::getConnection();
-        $result = $mysqli->query("SELECT * FROM products") or die($mysqli->error);
+        $result= $mysqli->query("SELECT DISTINCT pbrand FROM products") or die($mysqli->error);
+        return $result;
+    }
 
+    public static function getPcategory() {
+        $mysqli = Database::getConnection();
+        $result = $mysqli->query("SELECT DISTINCT pcategory FROM products") or die($mysqli->error);
         return $result;
     }
 
@@ -72,18 +67,6 @@ class ProductDAO {
         }
         $mysqli->close();
         return $data;
-    }
-
-    public static function getPbrand() {
-        $mysqli = Database::getConnection();
-        $result= $mysqli->query("SELECT DISTINCT pbrand FROM products") or die($mysqli->error);
-        return $result;
-    }
-
-    public static function getPcategory() {
-        $mysqli = Database::getConnection();
-        $result = $mysqli->query("SELECT DISTINCT pcategory FROM products") or die($mysqli->error);
-        return $result;
     }
 
     public static function getListNewProducts($number) {
@@ -126,13 +109,23 @@ class ProductDAO {
         $mysqli->close();
         return $data;
     }
-
     public static function getListProductByBrand($brand) {
         
     }
-
     public static function getListProductByCategoryAndBrand($category, $brand) {
         
     }
-
+    public static function getListProductByPrice() {
+    
+    }
+    /*---================================  Sắp xếp thuận ===================================---*/
+    public static function getListProductByCategorySortAZ($category) {}
+    public static function getListProductByBrandSortAZ($brand) {}
+    public static function getListProductByPriceSort19() {}
+    public static function getListProductByNameSortAZ() {}
+    /*---================================  Sắp xếp đảo ===================================---*/
+    public static function getListProductByCategorySortZA($category) {}
+    public static function getListProductByBrandSortZA($brand) {}
+    public static function getListProductByPriceSort91() {}
+    public static function getListProductByNameSortZA() {}
 }
