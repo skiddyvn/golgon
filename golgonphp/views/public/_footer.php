@@ -4,26 +4,35 @@
 <div id="footer">
     <div id="topbar-footer">
         <div class="container">
-        <div id="topbar-footer-item">
-            <div class="block-item first-item col-3"><i class="fas fa-truck icon-block"></i>FREE DELIVERY</div>
-            <div class="block-item second-item col-3"><i class="fas fa-headset icon-block"></i>SUPPORT 24/7</div>
-            <div class="block-item third-item col-3"><i class="fas fa-shield-alt icon-block"></i>SECURE PAYMENT</div>
-            <div class="block-item last-item">
-                <form action="home" method="post">
-                    <div id="group-register-mail">
-                    <i class="fas fa-tags icon-block"></i>
-                        <div id="group-register-mail-content">
-                        <div id="register-mail-title">Register to get the lastest news and sales</div>
-                        <div id="register-mail-block">
-                            <i class="fa fa-envelope icon-mail"></i>
-                            <input type="text" id="register-mail-block-input" name="mail-register-sale">
-                            <input type="submit" id="register-mail-block-btn" value="Register">
+            <div id="topbar-footer-item">
+                <div class="block-item first-item col-3 flex">
+                    <span class="icon-block"><img src="/golgonphp/assets/images/circle-bubbles/icons8-truck-100.png"/></span>
+                    <span class="icon-title col-6">FREE DELIVERY</span>
+                </div>
+                <div class="block-item second-item col-3 flex">
+                    <span class="icon-block"><img src="/golgonphp/assets/images/circle-bubbles/icons8-headset-100.png"/></span>
+                    <span class="icon-title col-6">SUPPORT 24/7</span>
+                </div>
+                <div class="block-item third-item col-3 flex">
+                    <span class="icon-block"><img src="/golgonphp/assets/images/circle-bubbles/icons8-protect-100.png"/></span>
+                    <span class="icon-title col-6">SECURE PAYMENT</span>
+                </div>
+                <div class="block-item last-item flex">
+                    <form action="home" method="post">
+                        <div id="group-register-mail">
+                            <span><img src="/golgonphp/assets/images/circle-bubbles/icons8-sent-100.png"/></span>
+                            <div id="group-register-mail-content">
+                            <div id="register-mail-title">Register to get the lastest news and sales</div>
+                            <div id="register-mail-block">
+                                <i class="fa fa-envelope icon-mail"></i>
+                                <input type="text" id="register-mail-block-input" name="mail-register-sale">
+                                <input type="submit" id="register-mail-block-btn" value="Register">
+                            </div>
+                            </div>
                         </div>
-                        </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
-        </div>
         </div>
     </div>
     <div class="container">
@@ -75,10 +84,10 @@
         <div id="footer-section-3">
             <h3>COMMUNITY</h3>
             <div>
-                <div class="fb-page" data-href="https://www.facebook.com/Golgon-Gaming-Gear-PC-Components-268728930445700" data-tabs="timeline" 
+                <div class="fb-page" data-href="https://www.facebook.com/Golgonpc-483583988845248/" data-tabs="timeline" 
                 data-width="1200" data-height="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-                        <blockquote cite="https://www.facebook.com/Golgon-Gaming-Gear-PC-Components-268728930445700" class="fb-xfbml-parse-ignore">
-                                <a href="https://www.facebook.com/Golgon-Gaming-Gear-PC-Components-268728930445700">Golgon Gaming Gear &amp; PC Components
+                        <blockquote cite="https://www.facebook.com/Golgonpc-483583988845248/" class="fb-xfbml-parse-ignore">
+                                <a href="https://www.facebook.com/Golgonpc-483583988845248/">Golgon Gaming Gear &amp; PC Components
                                 </a>
                         </blockquote>
                 </div>
