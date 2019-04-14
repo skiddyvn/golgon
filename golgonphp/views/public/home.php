@@ -15,7 +15,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="/golgonphp/assets/js/smooth.js"></script>
         <script src="/golgonphp/assets/js/jquery3-3-1.min.js"></script>
-        <script src="/golgonphp/assets/js/home.js"></script>
+        <script src="/golgonphp/assets/js/start.js"></script>
         
     </head>
     <body class="scene_element-fadeInRight">
@@ -127,13 +127,13 @@
             <div class="container">
                 <div class="col-12">
                     <!-- % =============  New collection  ============== % -->
-                    <div class="trending col-12">
-                        <div class="trending col-12">
+                    <div class="trending col-12 col-xs-12 col-sm-12">
+                        <div class="trending col-12 col-xs-12 col-sm-12">
                             <div class="trending-title flex">
-                                <div class="font-2">Hi-end Collection</div>
-                                <div class="list-new-select">
+                                <div class="font-2 col-xs-12 col-sm-12">Hi-end Collection</div>
+                                <div class="list-new-select col-xs-12 col-sm-12">
                                     <a href="#new1" class="selected">New Arrival</a>
-                                    <span>Don't forget the lastest hi-tech items everyday!</span>
+                                    <span class="col-xs-12 col-sm-12">Don't forget the lastest hi-tech items everyday!</span>
                                 </div>
                             </div>
                             <div class="tr-banner col-12 light-slide">
@@ -186,7 +186,7 @@
            <!-- % ==========================  DESKTOP  =============================== % -->
            
                     <div class="home-body-block col-12 col-xs-12 col-sm-12 clearfix">
-                        <div class="home-body-side-banner col-2-5 left">
+                        <div class="home-body-side-banner col-2-5 col-xs-0 col-sm-0 left">
                             <img src="/golgonphp/assets/images/events/sidebanner3.png"/>
                         </div>
                         <div class="col-9-5 left pad-0-15">
@@ -247,17 +247,17 @@
                     </div>
            <!-- % ==========================  Line quang cao  =============================== % -->
                     <div class="flex col-12 qcline">
-                        <div class="col-4 light-slide"><img src="/golgonphp/assets/images/events/banner03.png"/></div>
-                        <div class="col-4 light-slide"><img src="/golgonphp/assets/images/events/banner-big-02.jpg"/></div>
-                        <div class="col-4 light-slide"><img src="/golgonphp/assets/images/events/banner-big-04.jpg"/></div>
+                        <div class="col-4 col-xs-12 col-sm-12 light-slide"><img src="/golgonphp/assets/images/events/banner03.png"/></div>
+                        <div class="col-4 col-xs-12 col-sm-12 light-slide"><img src="/golgonphp/assets/images/events/banner-big-02.jpg"/></div>
+                        <div class="col-4 col-xs-12 col-sm-12 light-slide"><img src="/golgonphp/assets/images/events/banner-big-04.jpg"/></div>
                     </div>
             <!-- % ==========================  COMPONENTS  =============================== % -->
                     <div class="home-body-block col-12 col-xs-12 col-sm-12 clearfix">
                         <div class="col-9-5 left pad-0-15">
                             <div class="trending-title flex">
-                                <div class="trending-title-left flex col-10">
-                                    <div class="font-2">Components</div>
-                                    <div>
+                                <div class="trending-title-left flex col-10 col-xs-12 col-sm-12">
+                                    <div class="font-2 col-xs-12 col-sm-12">Components</div>
+                                    <div class="col-xs-12 col-sm-12">
                                         <a class="cat-tab-2 selected" href="#tab3">Mainboard</a>
                                         <a class="cat-tab-2" href="#tab4">VGA</a>
                                         <a class="cat-tab-2" href="#tab5">CPU</a>
@@ -312,20 +312,20 @@
                             }
                             ?>
                         </div>
-                        <div class="home-body-side-banner col-2-5 left">
+                        <div class="home-body-side-banner col-2-5 col-xs-0 col-sm-0 left">
                             <img src="/golgonphp/assets/images/events/sidebanner9.jpg"/>
                         </div>
                     </div>
                     <!-- % ==========================  GEARS  =============================== % -->
                     <div class="home-body-block col-12 col-xs-12 col-sm-12 clearfix">
-                        <div class="home-body-side-banner col-2-5 left">
+                        <div class="home-body-side-banner col-2-5 col-xs-0 col-sm-0 left">
                             <img src="/golgonphp/assets/images/events/sidebanner8.jpg"/>
                         </div>
                         <div class="col-9-5 left pad-0-15">
                             <div class="trending-title flex">
-                                <div class="trending-title-left flex col-10">
-                                    <div class="font-2">Gears</div>
-                                    <div>
+                                <div class="trending-title-left flex col-10 col-xs-12 col-sm-12">
+                                    <div class="font-2 col-xs-12 col-sm-12">Gears</div>
+                                    <div class="col-xs-12 col-sm-12">
                                         <a class="cat-tab-3 selected" href="#tab9">Monitor</a>
                                         <a class="cat-tab-3" href="#tab10">Keyboard</a>
                                         <a class="cat-tab-3" href="#tab11">Mouse</a>
@@ -383,9 +383,9 @@
                     <div class="home-body-block col-12 col-xs-12 col-sm-12 clearfix">
                         <div class="col-9-5 left pad-0-15">
                             <div class="trending-title flex">
-                                <div class="trending-title-left flex col-10">
-                                    <div class="font-2">Components</div>
-                                    <div>
+                                <div class="trending-title-left flex col-10 col-xs-12 col-sm-12">
+                                    <div class="font-2 col-xs-12 col-sm-12">Others</div>
+                                    <div class="col-xs-12 col-sm-12">
                                         <a class="cat-tab-4 selected" href="#tab13">Cooling</a>
                                         <a class="cat-tab-4" href="#tab14">Console</a>
                                         <a class="cat-tab-4" href="#tab15">Accessories</a>
@@ -437,26 +437,76 @@
                             }
                             ?>
                         </div>
-                        <div class="home-body-side-banner col-2-5 left">
+                        <div class="home-body-side-banner col-2-5 col-xs-0 col-sm-0 left">
                             <img src="/golgonphp/assets/images/events/sidebanner7.jpg"/>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!--%======================== OTHERS ==============================%-->
-        <div id="home-info" class="col-12">
+        <!--%======================== EXTRA PANEL ==============================%-->
+        <div id="home-info" class="col-12 col-xs-12 col-sm-12">
             <div class="container">
-                <div class="col-12">
-                    Cooperate : 
+                <div class="col-12 col-xs-12 col-sm-12 pad-15-0">
+                    <div class="home-info-upper col-12 col-xs-12 col-sm-12">
+                        <div class="home-info-upper-title">Golgon Services</div>
+                        <div class="home-info-upper-line">
+                            <span>Free shipping</span>
+                            <span>-</span>
+                            <span>Long-term guarantees</span>
+                            <span>-</span>
+                            <span>Full of after sales services</span>
+                        </div>
+                    </div>
+                    <div class="home-info-lower col-12 col-xs-12 col-sm-12 flex-col">
+                        <div class="inner-lower col-12 clearfix">
+                            <div class="inner-lower-block col-4 left">
+                                <div class="inner-lower-title col-12 col-xs-12 col-sm-12">Delivery</div>
+                                <div class="inner-lower-content flex-col col-10 col-xs-12 col-sm-12">
+                                    <span>// Free shipping for all orders 1.000.000 VND or above</span>
+                                    <span>// Fees discount within 2 kilometres</span>
+                                    <span>// Arrive in 3 days or less</span>
+                                    <span>// Returns within 48 hours if occurring any errors</span>
+                                </div>
+                            </div>
+                            <div class="inner-lower-block col-4 left">
+                                <div class="inner-lower-title col-12 col-xs-12 col-sm-12">Check our fanpage</div>
+                                <div class="inner-lower-content flex-col col-10 col-xs-12 col-sm-12">
+                                    <span>// Online market for trading and selling items</span>
+                                    <span>// Special events, Give Away, .. by both administrators and members</span>
+                                    <span>// Exchange Knowledge and Experience Or get Advice from others</span>
+                                </div>
+                            </div>
+                            <div class="inner-lower-block col-4 left">
+                                <div class="inner-lower-title col-12 col-xs-12 col-sm-12">Announcement</div>
+                                <div class="inner-lower-content flex-col col-10 col-xs-12 col-sm-12">
+                                    <span>// Give Away GTX 1050ti to 2060 only 5 days !! Don't miss it <a href="https://www.facebook.com/Golgonpc-483583988845248/">Click here</a></span>
+                                    <span>// New stores in Hanoi --- 12th May 2019</span>
+                                    <span>// Sweepstakes prizes values up to 20.000.000 VND. <a href="https://www.facebook.com/Golgonpc-483583988845248/">Check it out !!</a></span>
+                                    <span>// For more information, check ->>> <a href="https://www.facebook.com/Golgonpc-483583988845248/">Fanpage</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home-info-lower-2 col-12 col-xs-12 col-sm-12 flex">
+                        <div class="col-8 col-xs-12 col-sm-12">
+                            <img src="/golgonphp/assets/images/events/banner-big-06.jpg"/>
+                        </div>
+                        <div class="col-4 col-xs-12 col-sm-12">
+                            <img src="/golgonphp/assets/images/events/banner-square-msi.jpg"/>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <!--%======================== FOOTER ==============================%-->
         <?php require_once('views/public/_footer.php'); ?>
+        <button id="back">
+            <i class="fa fa-3x fa-arrow-circle-up"></i>
+        </button>
         <!--%======================== JS ==============================%-->
         <script src="/golgonphp/assets/js/home-tab-slider-inner-slide.js"></script>
         <script src="/golgonphp/assets/js/home-tab-slider.js"></script>
-        <script src="/golgonphp/assets/js/home-product-slide.js"></script>
+        <script src="/golgonphp/assets/js/home.js"></script>
     </body>
 </html>
