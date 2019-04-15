@@ -13,10 +13,10 @@
         <link rel="icon" href="/golgonphp/assets/images/game-console.png">
         <link rel="stylesheet" href="/golgonphp/assets/fontawesome/css/all.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
         <script src="/golgonphp/assets/js/smooth.js"></script>
         <script src="/golgonphp/assets/js/jquery3-3-1.min.js"></script>
         <script src="/golgonphp/assets/js/start.js"></script>
-        
     </head>
     <body class="scene_element-fadeInRight">
         <!--%======================== HEADER ==============================%-->
@@ -156,12 +156,12 @@
                                                 <div class="inner-content-image">
                                                     <div class="upper-block upper-block-2 animate-e-fadeInRight">'.$p->getPbrand().'</div>
                                                     <div class="upper-block upper-block-1 animate-e-fadeInRight">'.$p->getPcategory().'</div>
-                                                    <a href="detailProduct/' . $p->getPid() . '">
+                                                    <a href="/golgonphp/product/detail/' . $p->getPid() . '">
                                                         <button class="upper-block animate-e-fadeInLeft">Buy Product</button>
                                                     </a>
                                                 </div>
                                             </div>
-                                            <a href="detailProduct/' . $p->getPid() . '">
+                                            <a href="/golgonphp/product/detail/' . $p->getPid() . '">
                                                 <div class="product-info">
                                                     <h5>' . $p->getPname() . '</h5>
                                                     <span class="pprice">
@@ -222,12 +222,12 @@
                                                 <div class="inner-content-image">
                                                     <div class="upper-block upper-block-2 animate-e-fadeInRight">' . $p->getPbrand() . '</div>
                                                     <div class="upper-block upper-block-1 animate-e-fadeInRight">' . $p->getPcategory() . '</div>
-                                                    <a href="detailProduct/' . $p->getPid() . '">
+                                                    <a href="/golgonphp/product/detail/' . $p->getPid() . '">
                                                         <button class="upper-block animate-e-fadeInLeft">Buy Product</button>
                                                     </a>
                                                 </div>
                                             </div>
-                                            <a href="detailProduct/' . $p->getPid() . '">
+                                            <a href="/golgonphp/product/detail/' . $p->getPid() . '">
                                                 <div class="product-info">
                                                     <h5>' . $p->getPname() . '</h5>
                                                     <span class="pprice">
@@ -290,12 +290,12 @@
                                                 <div class="inner-content-image">
                                                     <div class="upper-block upper-block-2 animate-e-fadeInRight">' . $p->getPbrand() . '</div>
                                                     <div class="upper-block upper-block-1 animate-e-fadeInRight">' . $p->getPcategory() . '</div>
-                                                    <a href="detailProduct/' . $p->getPid() . '">
+                                                    <a href="/golgonphp/product/detail/' . $p->getPid() . '">
                                                         <button class="upper-block animate-e-fadeInLeft">Buy Product</button>
                                                     </a>
                                                 </div>
                                             </div>
-                                            <a href="detailProduct/' . $p->getPid() . '">
+                                            <a href="/golgonphp/product/detail/' . $p->getPid() . '">
                                                 <div class="product-info">
                                                     <h5>' . $p->getPname() . '</h5>
                                                     <span class="pprice">
@@ -356,12 +356,12 @@
                                                 <div class="inner-content-image">
                                                     <div class="upper-block upper-block-2 animate-e-fadeInRight">' . $p->getPbrand() . '</div>
                                                     <div class="upper-block upper-block-1 animate-e-fadeInRight">' . $p->getPcategory() . '</div>
-                                                    <a href="detailProduct/' . $p->getPid() . '">
+                                                    <a href="/golgonphp/product/detail/' . $p->getPid() . '">
                                                         <button class="upper-block animate-e-fadeInLeft">Buy Product</button>
                                                     </a>
                                                 </div>
                                             </div>
-                                            <a href="detailProduct/' . $p->getPid() . '">
+                                            <a href="/golgonphp/product/detail/' . $p->getPid() . '">
                                                 <div class="product-info">
                                                     <h5>' . $p->getPname() . '</h5>
                                                     <span class="pprice">
@@ -415,12 +415,12 @@
                                                 <div class="inner-content-image">
                                                     <div class="upper-block upper-block-2 animate-e-fadeInRight">' . $p->getPbrand() . '</div>
                                                     <div class="upper-block upper-block-1 animate-e-fadeInRight">' . $p->getPcategory() . '</div>
-                                                    <a href="detailProduct/' . $p->getPid() . '">
+                                                    <a href="/golgonphp/product/detail/' . $p->getPid() . '">
                                                         <button class="upper-block animate-e-fadeInLeft">Buy Product</button>
                                                     </a>
                                                 </div>
                                             </div>
-                                            <a href="detailProduct/' . $p->getPid() . '">
+                                            <a href="/golgonphp/product/detail/' . $p->getPid() . '">
                                                 <div class="product-info">
                                                     <h5>' . $p->getPname() . '</h5>
                                                     <span class="pprice">
