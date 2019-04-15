@@ -13,53 +13,48 @@ $(document).ready(function () {
     }
     $(".prslide-prev").click(translateLeft);
     $(".prslide-next").click(translateRight);
-    
-    $(".cat-tab").click(function() {
+
+    $(".cat-tab").click(function () {
         var tab = $(this).attr("href").split('#')[1];
         $(".row-1").not(document.getElementById(tab)).hide();
-        $("#"+tab+"").show();
+        $("#" + tab + "").show();
         $(".cat-tab").removeClass("selected");
         $(this).addClass("selected");
         return false;
     });
-    $(".cat-tab-2").click(function() {
+    $(".cat-tab-2").click(function () {
         var tab = $(this).attr("href").split('#')[1];
         $(".row-2").not(document.getElementById(tab)).hide();
-        $("#"+tab+"").show();
+        $("#" + tab + "").show();
         $(".cat-tab-2").removeClass("selected");
         $(this).addClass("selected");
         return false;
     });
-    $(".cat-tab-3").click(function() {
+    $(".cat-tab-3").click(function () {
         var tab = $(this).attr("href").split('#')[1];
         $(".row-3").not(document.getElementById(tab)).hide();
-        $("#"+tab+"").show();
+        $("#" + tab + "").show();
         $(".cat-tab-3").removeClass("selected");
         $(this).addClass("selected");
         return false;
     });
-    $(".cat-tab-4").click(function() {
+    $(".cat-tab-4").click(function () {
         var tab = $(this).attr("href").split('#')[1];
         $(".row-4").not(document.getElementById(tab)).hide();
-        $("#"+tab+"").show();
+        $("#" + tab + "").show();
         $(".cat-tab-4").removeClass("selected");
         $(this).addClass("selected");
         return false;
     });
-    $('a[href="#home-news"]').click(function(e) {
-        e.preventDefault();
-        var elementpos = $($(this).attr('href')).offset().top;
-        $('html').animate({scrollTop: elementpos + 'px'}, 400);
-    });
-    window.onscroll = function() {
-            if(document.documentElement.scrollTop > 20 &&  document.documentElement.scrollTop < 4730) {
-                $('#back').show();
-            } else {
-                $('#back').hide();
-            }
+    window.onscroll = function () {
+        if (document.documentElement.scrollTop > 20 && document.documentElement.scrollTop < 4730) {
+            $('#back').show();
+        } else {
+            $('#back').hide();
+        }
     };
-    $('#back').click(function(e) {
+    $('#back').click(function (e) {
         e.preventDefault();
-        $('html').animate({scrollTop:0},400);
+        $('html').animate({scrollTop: 0}, 400);
     });
 });
