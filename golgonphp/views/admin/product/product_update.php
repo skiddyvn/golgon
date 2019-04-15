@@ -98,7 +98,7 @@ require_once 'E:\xampp\htdocs\golgonphp\controllers\ProductController.php';
             $pbrand = ProductDAO::getPbrand();
             $pcategory = ProductDAO::getPcategory();
             $pid =$_GET['id'];
-            $product = ProductDAO::getAProduct($pid);
+            $product = ProductDAO::getProductById($pid);
             ?>
             <div class="content-form">
                 <form method="POST" enctype="multipart/form-data">
