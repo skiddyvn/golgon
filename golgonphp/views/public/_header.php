@@ -1,7 +1,8 @@
 <script src="/golgonphp/assets/js/ajax.js"></script>
-<script src="/golgonphp/assets/js/header.js"></script>  
+<script src="/golgonphp/assets/js/header.js"></script>
 <?php error_reporting(0); ?>
 <!--================   TOP BAR  ===================-->
+<div id="header">
 <div id="upper-header" class="clearfix">
     <div class="container">
         <!--=========================   LOGO  ==========================-->
@@ -49,35 +50,35 @@
         <div class="flex col-7 lower-header-navigation col-xs-0 col-sm-0">
             <!--================= Links ====================-->
             <div class="flex col-10">
-                <div class="col-2"><a href="/golgonphp/home/index"><i class="fa fa-home w-color font-1-5 brdb-hover"></i></a></div>
-                <div class="col-3 w-color bold">
-                    <a href="/golgonphp/home/news">
+                <div class="col-2"><a href="/golgonphp/home/index"><i class="fa fa-home wclr font-1-5"></i></a></div>
+                <div class="col-3 wclr bold">
+                    <a href="/golgonphp/home/index#home-news">
                         <div class="flex-col">
-                            <div class="header-nav-icon col-12"><img src="/golgonphp/assets/images/header-icons/icons8-new-100.png"/><n></n></div>
+                            <div class="header-nav-icon col-12"><img src="/golgonphp/assets/images/circle-bubbles/icons8-new-100.png"/><n></n></div>
                             <div class="header-nav-title col-12 font-1">WHAT'S NEWS ?</div>
                         </div
                     </a>
                 </div>
-                <div class="col-3 w-color bold">
-                    <a href="/golgonphp/home/sales">
+                <div class="col-3 wclr bold">
+                    <a href="/golgonphp/home/index#home-info">
                         <div class="flex-col">
-                            <div class="header-nav-icon col-12"><img src="/golgonphp/assets/images/header-icons/icons8-discount-100.png"/><n></n></div>
+                            <div class="header-nav-icon col-12"><img src="/golgonphp/assets/images/circle-bubbles/icons8-discount-100.png"/><n></n></div>
                             <div class="header-nav-title col-12 font-1">SALES</div>
                         </div>
                     </a>
                 </div>
-                <div class="col-3 w-color bold">
+                <div class="col-3 wclr bold">
                     <a href="/golgonphp/home/contact">
                         <div class="flex-col">
-                            <div class="header-nav-icon col-12"><img src="/golgonphp/assets/images/header-icons/icons8-help-100.png"/><n></n></div>
+                            <div class="header-nav-icon col-12"><img src="/golgonphp/assets/images/circle-bubbles/icons8-help-100.png"/><n></n></div>
                             <div class="header-nav-title col-12 font-1">CONTACT</div>
                         </div>
                     </a>
                 </div>
-                <div class="col-3 w-color bold">
+                <div class="col-3 wclr bold">
                     <a href="/golgonphp/home/about">
                         <div class="flex-col">
-                            <div class="header-nav-icon col-12"><img src="/golgonphp/assets/images/header-icons/icons8-about-100.png"/><n></n></div>
+                            <div class="header-nav-icon col-12"><img src="/golgonphp/assets/images/circle-bubbles/icons8-about-100.png"/><n></n></div>
                             <div class="header-nav-title col-12 font-1">ABOUT US</div>
                         </div>
                     </a>
@@ -92,19 +93,19 @@
                     <a href="/golgonphp/home/cart"><div class="image-wrapper"><img src="/golgonphp/assets/images/cart.png"/></div></a>
                 </div>
                 <div class="col-8 flex-col col-xs-4 col-sm-7 cart-text">
-                    <div class="w-color bold">CART</div>
+                    <div class="wclr bold">CART</div>
                     <div class="col-11 num-cart">0 <span class="col-xs-0 col-sm-12">product(s)</span></div>
                 </div>
             </div>
         </div>
         <!-- bars -->
         <div class="bars-icon col-xs-1 col-sm-1">
-            <span id="bars-icon-i" class="fa fa-bars w-color fa-2x" onclick="responsiveCollapse()"></span>
+            <span id="bars-icon-i" class="fa fa-bars wclr fa-2x" onclick="responsiveCollapse()"></span>
             <div id="navpanel" class="cnavpanel">
                 <ul class="navpanel-ul flex-col">
                     <li class="navpanel-li">
                         <a href="/golgonphp/home">
-                            <i class="fa fa-home w-color font-1-5 brdb-hover"></i>
+                            <i class="fa fa-home wclr font-1-5 brdb-hover"></i>
                         </a>
                     </li>
                     <li class="navpanel-li">
@@ -144,7 +145,13 @@
 <div id="extrabar">
     <div class="container">
         <div class="flex col-12 inner col-xs-12 col-sm-12">
-            <div class="col-6 flex col-xs-12 col-sm-12" id="search-box">
+            <div id="bar-nav" class="col-1">
+                <div id="bar-nav-btn"><i class="fa fa-2x fa-bars"></i></div>
+                <div id="bar-nav-panel">
+                    <?php include('navigation.php') ?>
+                </div>
+            </div>
+            <div class="col-5 flex col-xs-12 col-sm-12" id="search-box">
                 <div class="relative col-12 col-xs-12 col-sm-12">
                     <input placeholder="Input product name, keywords, ..."/>
                     <button><i class="fas fa-search fa-lg pointer"></i></button>
@@ -227,3 +234,52 @@
         </div>
     </form>
 </div>
+</div>
+<!--%======================== NAVIGATION ==============================%-->
+
+<div id="sticky-header" class="col-12" style="margin:15px auto;">
+    <div class="container">
+        <div class="col-12">
+            <div>
+                !--%======================== NAVIGATION ==============================%-->
+                    <?php include('navigation.php'); ?>
+            </div>
+            <div>
+                <div class="col-6 flex col-xs-12 col-sm-12" id="search-box">
+                <div class="relative col-12 col-xs-12 col-sm-12">
+                    <input placeholder="Input product name, keywords, ..."/>
+                    <button><i class="fas fa-search fa-lg pointer"></i></button>
+                </div>
+            </div>
+            </div>
+            <div>
+                <!--===== Chua login =====-->
+                <div class="upper-header-right right col-9 col-xs-12" id="login-false">
+                    <div class="right flex">
+                        <div id="signin" class="pad-10-15" onclick="clicklogin1()">Sign In</div>
+                        <div id="register" class="pad-10-15" onclick="clicklogin2()">Register an account</div>
+                    </div>
+                </div>
+                <!--===== Login thanh cong =====-->
+                <div class="upper-header-right right col-9 col-xs-12" id="login-true">
+                    <div class="right flex">
+                        <div class="pad-10-15"><a href="/golgonphp/user/account"><span>My account</span></a></div>
+                        <div class="pad-10-15"><a href="/golgonphp/management"><span>Management</span></a></div>
+                        <div class="pad-10-15"><a href="#" onclick="logout()"><span>Logout</span></a></div>
+                    </div>
+                </div>
+
+                <?php
+                if (isset($_SESSION['user'])) {
+                    echo "<script>$('#login-false').hide()</script>";
+                    echo "<script>$('#login-true').show()</script>";
+                } else {
+                    echo "<script>$('#login-false').show()</script>";
+                    echo "<script>$('#login-true').hide()</script>";
+                }
+                ?>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/golgonphp/assets/js/navigation.js"></script>
