@@ -1,33 +1,8 @@
-.pad-5-15 {
-    padding:5px 15px;
-}
-.pad-10-15 {
-    padding:10px 15px;
-}
-.pad-5-5 {
-    padding:5px 5px;
-}
-.pointer:hover {
-    cursor:pointer;
-}
+.pointer:hover {cursor:pointer;}
+.bold {font-weight:bold;}
+.wclr { color:#fff;}
+.wclr a{color:#fff;}
 
-.bold {
-    font-weight:bold;
-}
-
-/*=================== WHITE COLOR ========================*/
-
-.w-color {
-    color:#fff;
-}
-.w-color a{
-    color:#fff;
-}
-.brdb-hover:hover .header-nav-title{
-    border-top:2px dashed #eee;
-    border-right:2px dashed #eee;
-    border-left:2px dashed #eee;
-}
 .header-nav-icon {
     padding:10px 0 0 0;
     position:relative;
@@ -445,4 +420,31 @@
     .modal-content1,.modal-content2 {
         width:80vw;
     }
+}
+
+/*==================== STICKY SCROLLING ========================*/
+.sticky {
+    position:fixed;
+    top:0;
+}
+#sticky-header {
+    display:none;
+}
+
+/*==================== NAV BAR DISPLAY ========================*/
+#bar-nav {
+    position:relative;
+}
+#bar-nav-panel {
+    position:absolute;
+    top:65px;
+    left:-20px;
+    width:200px;
+    z-index:10;
+}
+#bar-nav-panel #navigation {
+    width:100%;
+}
+#bar-nav-panel {
+    display:none;
 }
